@@ -1,24 +1,28 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TechCare Computer & Service Center</title>
+<title>PARTHO Computer & Service Center</title>
 
-<meta name="description" content="Professional computer repair, laptop service, PC upgrade, software installation, data recovery and IT support.">
+<meta name="description"
+      content="PARTHO Computer & Service Center - Professional computer repair, laptop service, PC upgrade, software installation, data recovery and IT support.">
+
+<meta name="theme-color" content="#07111f">
 
 <link rel="icon" href="data:image/svg+xml,
-<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
-<rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%220b1220%22/>
-<text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22>⚙</text>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<rect width='100' height='100' rx='20' fill='%230b1220'/>
+<text x='50' y='68' font-size='58' text-anchor='middle'>⚙</text>
 </svg>">
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
     margin:0;
@@ -49,11 +53,6 @@ a{
     color:inherit;
 }
 
-img{
-    max-width:100%;
-    display:block;
-}
-
 button,
 input,
 select,
@@ -67,14 +66,14 @@ textarea{
 }
 
 
-/* =========================
+/* =====================================================
    TOP BAR
-========================= */
+===================================================== */
 
 .topbar{
-    background:#0b1220;
+    background:#07111f;
     color:#dbeafe;
-    font-size:14px;
+    font-size:13px;
 }
 
 .topbar-inner{
@@ -99,38 +98,41 @@ textarea{
 
 .top-social{
     display:flex;
-    gap:12px;
+    gap:15px;
 }
 
 .top-social a{
-    opacity:.85;
+    color:#cbd5e1;
     transition:.2s;
 }
 
 .top-social a:hover{
-    opacity:1;
     color:#38bdf8;
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 .navbar{
     position:sticky;
     top:0;
     z-index:1000;
+
     background:rgba(255,255,255,.96);
     backdrop-filter:blur(12px);
+
     border-bottom:1px solid #e5e7eb;
 }
 
 .nav-inner{
     min-height:76px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:25px;
 }
 
@@ -143,37 +145,60 @@ textarea{
 .logo-icon{
     width:48px;
     height:48px;
-    border-radius:14px;
+
     display:grid;
     place-items:center;
-    color:#fff;
-    font-size:25px;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
-    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+    border-radius:14px;
+
+    color:white;
+    font-size:24px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.25);
 }
 
 .logo-text strong{
     display:block;
-    font-size:19px;
+
+    font-size:20px;
     line-height:1.1;
+
+    letter-spacing:.4px;
 }
 
 .logo-text small{
+    display:block;
+
     color:#64748b;
-    font-size:11px;
-    letter-spacing:1.5px;
+
+    font-size:9px;
+
+    letter-spacing:1.6px;
+
+    margin-top:3px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:24px;
 }
 
 .nav-links a{
     color:#334155;
+
     font-size:14px;
+
     font-weight:600;
+
     transition:.2s;
 }
 
@@ -183,8 +208,11 @@ textarea{
 
 .nav-cta{
     padding:11px 18px;
+
     background:#2563eb;
+
     color:white!important;
+
     border-radius:10px;
 }
 
@@ -194,60 +222,93 @@ textarea{
 
 .menu-btn{
     display:none;
+
     width:42px;
     height:42px;
+
     border:1px solid #e2e8f0;
+
     background:white;
+
     border-radius:10px;
+
     cursor:pointer;
+
     font-size:22px;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
     position:relative;
     overflow:hidden;
-    background:
-        radial-gradient(circle at 85% 20%,rgba(14,165,233,.18),transparent 28%),
-        radial-gradient(circle at 10% 90%,rgba(37,99,235,.15),transparent 30%),
-        #07111f;
 
     color:white;
+
+    background:
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(14,165,233,.18),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 10% 90%,
+        rgba(37,99,235,.15),
+        transparent 30%
+    ),
+    #07111f;
 }
 
 .hero::before{
     content:"";
+
     position:absolute;
+
     width:500px;
     height:500px;
+
     right:-200px;
     top:-220px;
+
     border:1px solid rgba(255,255,255,.08);
+
     border-radius:50%;
 }
 
 .hero::after{
     content:"";
+
     position:absolute;
+
     width:700px;
     height:700px;
+
     left:-500px;
     bottom:-500px;
+
     border:1px solid rgba(255,255,255,.06);
+
     border-radius:50%;
 }
 
 .hero-inner{
     min-height:620px;
+
     display:grid;
-    grid-template-columns:1.05fr .95fr;
+
+    grid-template-columns:
+    1.05fr
+    .95fr;
+
     align-items:center;
+
     gap:50px;
+
     position:relative;
+
     z-index:2;
 }
 
@@ -257,29 +318,49 @@ textarea{
 
 .badge{
     display:inline-flex;
+
     align-items:center;
+
     gap:8px;
+
     padding:8px 14px;
-    border:1px solid rgba(255,255,255,.14);
-    background:rgba(255,255,255,.06);
+
+    border:1px solid
+    rgba(255,255,255,.14);
+
+    background:
+    rgba(255,255,255,.06);
+
     border-radius:999px;
-    font-size:13px;
+
+    font-size:12px;
+
     color:#bae6fd;
+
     margin-bottom:20px;
 }
 
 .badge-dot{
     width:8px;
     height:8px;
+
     border-radius:50%;
+
     background:#22c55e;
-    box-shadow:0 0 0 5px rgba(34,197,94,.1);
+
+    box-shadow:
+    0 0 0 5px
+    rgba(34,197,94,.1);
 }
 
 .hero h1{
-    font-size:clamp(40px,5vw,68px);
+    font-size:
+    clamp(40px,5vw,68px);
+
     line-height:1.03;
+
     letter-spacing:-2.5px;
+
     margin-bottom:22px;
 }
 
@@ -289,43 +370,63 @@ textarea{
 
 .hero p{
     max-width:610px;
+
     color:#b8c7d9;
+
     font-size:18px;
+
     margin-bottom:30px;
 }
 
 .hero-buttons{
     display:flex;
+
     gap:13px;
+
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
+
     padding:14px 21px;
+
     border-radius:11px;
+
     font-weight:700;
+
     border:none;
+
     cursor:pointer;
+
     transition:.25s;
 }
 
 .btn-primary{
     background:#2563eb;
+
     color:white;
-    box-shadow:0 12px 30px rgba(37,99,235,.25);
+
+    box-shadow:
+    0 12px 30px
+    rgba(37,99,235,.25);
 }
 
 .btn-primary:hover{
     background:#1d4ed8;
+
     transform:translateY(-2px);
 }
 
 .btn-light{
     background:white;
+
     color:#0f172a;
 }
 
@@ -335,160 +436,237 @@ textarea{
 
 .btn-outline{
     border:1px solid #cbd5e1;
+
     background:white;
+
     color:#1e293b;
 }
 
 .btn-outline:hover{
     border-color:#2563eb;
+
     color:#2563eb;
 }
 
 
-/* =========================
-   HERO COMPUTER
-========================= */
+/* =====================================================
+   HERO DEVICE
+===================================================== */
 
 .hero-device{
     position:relative;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 }
 
 .monitor{
     width:min(480px,100%);
+
     background:#101b2d;
+
     border:8px solid #1e293b;
+
     border-radius:20px;
+
     padding:10px;
+
     box-shadow:
-        0 30px 80px rgba(0,0,0,.45),
-        0 0 0 1px rgba(255,255,255,.08);
-    transform:perspective(1000px) rotateY(-4deg);
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 0 1px
+    rgba(255,255,255,.08);
+
+    transform:
+    perspective(1000px)
+    rotateY(-4deg);
 }
 
 .monitor-screen{
     min-height:290px;
+
     border-radius:10px;
+
     background:
-        linear-gradient(135deg,rgba(37,99,235,.3),rgba(6,182,212,.12)),
-        #07111f;
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,.3),
+        rgba(6,182,212,.12)
+    ),
+    #07111f;
+
     padding:25px;
+
     overflow:hidden;
 }
 
 .screen-top{
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     margin-bottom:25px;
 }
 
 .screen-dots{
     display:flex;
+
     gap:6px;
 }
 
 .screen-dots i{
     width:8px;
     height:8px;
+
     background:#475569;
+
     border-radius:50%;
 }
 
 .screen-title{
     color:#94a3b8;
-    font-size:11px;
+
+    font-size:10px;
+
+    letter-spacing:1px;
 }
 
 .screen-main{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:12px;
 }
 
 .screen-card{
     padding:18px;
+
     border-radius:12px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.06);
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:1px solid
+    rgba(255,255,255,.06);
 }
 
 .screen-card strong{
     display:block;
+
     color:white;
+
     font-size:26px;
 }
 
 .screen-card span{
     color:#94a3b8;
+
     font-size:11px;
 }
 
 .screen-bar{
     height:8px;
+
     border-radius:10px;
+
     background:#1e293b;
+
     margin-top:12px;
+
     overflow:hidden;
 }
 
 .screen-bar div{
     width:75%;
+
     height:100%;
+
     background:#22c55e;
 }
 
 .monitor-stand{
     width:120px;
     height:65px;
+
     margin:auto;
+
     position:relative;
 }
 
 .monitor-stand::before{
     content:"";
+
     position:absolute;
+
     width:16px;
     height:50px;
+
     background:#1e293b;
+
     left:52px;
 }
 
 .monitor-stand::after{
     content:"";
+
     position:absolute;
+
     width:140px;
     height:12px;
+
     background:#1e293b;
+
     bottom:0;
     left:-10px;
+
     border-radius:10px;
 }
 
 .floating-card{
     position:absolute;
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     padding:13px 16px;
+
     background:white;
+
     color:#111827;
+
     border-radius:13px;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.25);
+
     font-size:13px;
+
     font-weight:700;
 }
 
 .float-icon{
     width:38px;
     height:38px;
+
     display:grid;
+
     place-items:center;
+
     border-radius:10px;
+
     background:#eff6ff;
+
     color:#2563eb;
+
     font-size:19px;
 }
 
@@ -502,46 +680,67 @@ textarea{
     bottom:40px;
 }
 
+
+/* =====================================================
+   HERO STATS
+===================================================== */
+
 .hero-stats{
     display:flex;
+
     gap:35px;
+
     margin-top:45px;
+
     flex-wrap:wrap;
 }
 
 .hero-stat strong{
     display:block;
+
     font-size:24px;
 }
 
 .hero-stat span{
     color:#94a3b8;
+
     font-size:12px;
 }
 
 
-/* =========================
+/* =====================================================
    TRUST BAR
-========================= */
+===================================================== */
 
 .trust{
     background:white;
-    border-bottom:1px solid #e5e7eb;
+
+    border-bottom:
+    1px solid #e5e7eb;
 }
 
 .trust-grid{
     min-height:90px;
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     align-items:center;
 }
 
 .trust-item{
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:12px;
-    border-right:1px solid #e5e7eb;
+
+    border-right:
+    1px solid #e5e7eb;
 }
 
 .trust-item:last-child{
@@ -554,18 +753,20 @@ textarea{
 
 .trust-item strong{
     display:block;
+
     font-size:14px;
 }
 
 .trust-item span{
     color:#64748b;
+
     font-size:12px;
 }
 
 
-/* =========================
+/* =====================================================
    SECTION
-========================= */
+===================================================== */
 
 section{
     padding:90px 0;
@@ -573,23 +774,35 @@ section{
 
 .section-head{
     text-align:center;
+
     max-width:700px;
-    margin:0 auto 48px;
+
+    margin:
+    0 auto 48px;
 }
 
 .eyebrow{
     color:#2563eb;
+
     font-size:12px;
+
     text-transform:uppercase;
+
     font-weight:800;
+
     letter-spacing:2px;
+
     margin-bottom:10px;
 }
 
 .section-head h2{
-    font-size:clamp(30px,4vw,43px);
+    font-size:
+    clamp(30px,4vw,43px);
+
     line-height:1.15;
+
     letter-spacing:-1px;
+
     margin-bottom:14px;
 }
 
@@ -598,9 +811,9 @@ section{
 }
 
 
-/* =========================
+/* =====================================================
    SERVICES
-========================= */
+===================================================== */
 
 .services{
     background:#fff;
@@ -608,36 +821,55 @@ section{
 
 .service-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:18px;
 }
 
 .service-card{
     padding:25px;
+
     border:1px solid #e5e7eb;
+
     border-radius:17px;
+
     background:white;
+
     transition:.25s;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .service-card::after{
     content:"";
+
     position:absolute;
+
     width:80px;
     height:80px;
+
     right:-40px;
     bottom:-40px;
+
     border-radius:50%;
+
     background:#eff6ff;
+
     transition:.25s;
 }
 
 .service-card:hover{
     transform:translateY(-6px);
+
     border-color:#bfdbfe;
-    box-shadow:0 18px 40px rgba(15,23,42,.08);
+
+    box-shadow:
+    0 18px 40px
+    rgba(15,23,42,.08);
 }
 
 .service-card:hover::after{
@@ -647,35 +879,50 @@ section{
 .service-icon{
     width:55px;
     height:55px;
+
     border-radius:14px;
+
     display:grid;
+
     place-items:center;
+
     background:#eff6ff;
+
     color:#2563eb;
+
     font-size:26px;
+
     margin-bottom:18px;
+
     position:relative;
+
     z-index:2;
 }
 
 .service-card h3{
     font-size:17px;
+
     margin-bottom:8px;
+
     position:relative;
+
     z-index:2;
 }
 
 .service-card p{
     color:#64748b;
+
     font-size:13px;
+
     position:relative;
+
     z-index:2;
 }
 
 
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about{
     background:#f8fafc;
@@ -683,8 +930,12 @@ section{
 
 .about-grid{
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
+
+    grid-template-columns:
+    .9fr 1.1fr;
+
     gap:65px;
+
     align-items:center;
 }
 
@@ -694,145 +945,226 @@ section{
 
 .workshop{
     background:#0f172a;
+
     border-radius:25px;
+
     min-height:440px;
+
     padding:30px;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .workshop::before{
     content:"";
+
     position:absolute;
+
     width:300px;
     height:300px;
+
     border-radius:50%;
-    border:1px solid rgba(255,255,255,.08);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
     top:-120px;
+
     right:-100px;
 }
 
 .workbench{
     position:absolute;
+
     left:35px;
     right:35px;
+
     bottom:70px;
+
     height:80px;
+
     background:#334155;
+
     border-radius:12px;
 }
 
 .pc-case{
     position:absolute;
+
     width:140px;
     height:230px;
+
     left:80px;
     bottom:145px;
+
     border-radius:14px;
+
     background:#1e293b;
+
     border:3px solid #475569;
-    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+    box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.4);
 }
 
 .pc-glass{
     margin:14px;
+
     height:175px;
+
     border-radius:8px;
+
     background:
-        radial-gradient(circle at 50% 50%,#38bdf8 0 5%,transparent 6%),
-        radial-gradient(circle at 50% 50%,rgba(56,189,248,.25) 0 30%,transparent 31%),
-        #0b1220;
+    radial-gradient(
+        circle at 50% 50%,
+        #38bdf8 0 5%,
+        transparent 6%
+    ),
+    radial-gradient(
+        circle at 50% 50%,
+        rgba(56,189,248,.25) 0 30%,
+        transparent 31%
+    ),
+    #0b1220;
+
     border:1px solid #334155;
 }
 
 .pc-light{
     position:absolute;
+
     width:7px;
     height:7px;
+
     background:#22c55e;
+
     border-radius:50%;
+
     bottom:18px;
     left:18px;
 }
 
 .laptop{
     position:absolute;
+
     width:220px;
     height:145px;
+
     right:65px;
     bottom:150px;
+
     background:#cbd5e1;
-    border-radius:12px 12px 4px 4px;
-    transform:perspective(500px) rotateY(-8deg);
+
+    border-radius:
+    12px 12px 4px 4px;
+
+    transform:
+    perspective(500px)
+    rotateY(-8deg);
 }
 
 .laptop-screen{
     margin:9px;
+
     height:110px;
+
     border-radius:7px;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
 }
 
 .laptop-base{
     position:absolute;
+
     width:250px;
     height:13px;
+
     background:#94a3b8;
+
     bottom:-12px;
+
     left:-15px;
-    border-radius:0 0 10px 10px;
+
+    border-radius:
+    0 0 10px 10px;
 }
 
 .about-content h2{
-    font-size:clamp(30px,4vw,44px);
+    font-size:
+    clamp(30px,4vw,44px);
+
     line-height:1.15;
+
     margin-bottom:18px;
 }
 
 .about-content>p{
     color:#64748b;
+
     margin-bottom:25px;
 }
 
 .check-list{
     display:grid;
+
     gap:14px;
+
     margin-bottom:28px;
 }
 
 .check{
     display:flex;
+
     gap:12px;
+
     align-items:flex-start;
 }
 
 .check-icon{
     width:24px;
     height:24px;
+
     flex:0 0 24px;
+
     border-radius:50%;
+
     display:grid;
+
     place-items:center;
+
     background:#dcfce7;
+
     color:#16a34a;
+
     font-size:13px;
+
     font-weight:bold;
 }
 
 .check strong{
     display:block;
+
     font-size:14px;
 }
 
 .check span{
     color:#64748b;
+
     font-size:13px;
 }
 
 
-/* =========================
+/* =====================================================
    PROCESS
-========================= */
+===================================================== */
 
 .process{
     background:white;
@@ -840,53 +1172,75 @@ section{
 
 .process-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:20px;
 }
 
 .process-card{
     text-align:center;
+
     padding:28px 18px;
+
     position:relative;
 }
 
 .process-number{
     width:62px;
     height:62px;
-    margin:0 auto 18px;
+
+    margin:
+    0 auto 18px;
+
     border-radius:50%;
+
     display:grid;
+
     place-items:center;
+
     background:#eff6ff;
+
     color:#2563eb;
+
     font-weight:800;
+
     font-size:19px;
+
     border:6px solid #dbeafe;
 }
 
 .process-card h3{
     font-size:17px;
+
     margin-bottom:7px;
 }
 
 .process-card p{
     color:#64748b;
+
     font-size:13px;
 }
 
 .process-card:not(:last-child)::after{
     content:"→";
+
     position:absolute;
+
     right:-14px;
+
     top:44px;
+
     color:#94a3b8;
+
     font-size:22px;
 }
 
 
-/* =========================
-   PRICING
-========================= */
+/* =====================================================
+   PACKAGES
+===================================================== */
 
 .pricing{
     background:#f8fafc;
@@ -894,82 +1248,115 @@ section{
 
 .price-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:22px;
 }
 
 .price-card{
     background:white;
+
     border:1px solid #e2e8f0;
+
     border-radius:20px;
+
     padding:30px;
+
     position:relative;
 }
 
 .price-card.featured{
-    border:2px solid #2563eb;
+    border:
+    2px solid #2563eb;
+
     transform:translateY(-8px);
-    box-shadow:0 20px 50px rgba(37,99,235,.13);
+
+    box-shadow:
+    0 20px 50px
+    rgba(37,99,235,.13);
 }
 
 .popular{
     position:absolute;
+
     right:20px;
     top:20px;
+
     background:#2563eb;
+
     color:white;
+
     padding:5px 10px;
+
     border-radius:20px;
+
     font-size:10px;
+
     font-weight:800;
+
     text-transform:uppercase;
 }
 
 .price-card h3{
     font-size:20px;
+
     margin-bottom:8px;
 }
 
 .price-card>p{
     color:#64748b;
+
     font-size:13px;
 }
 
 .price{
     margin:22px 0;
+
     font-size:35px;
+
     font-weight:800;
 }
 
 .price small{
     font-size:12px;
+
     color:#64748b;
+
     font-weight:500;
 }
 
 .price-list{
     display:grid;
+
     gap:12px;
+
     margin-bottom:25px;
 }
 
 .price-list li{
     list-style:none;
+
     font-size:13px;
+
     color:#475569;
 }
 
 .price-list li::before{
     content:"✓";
+
     color:#16a34a;
+
     font-weight:800;
+
     margin-right:9px;
 }
 
 
-/* =========================
+/* =====================================================
    PARTS
-========================= */
+===================================================== */
 
 .parts{
     background:white;
@@ -977,77 +1364,101 @@ section{
 
 .parts-grid{
     display:grid;
-    grid-template-columns:repeat(6,1fr);
+
+    grid-template-columns:
+    repeat(6,1fr);
+
     gap:15px;
 }
 
 .part{
     border:1px solid #e5e7eb;
+
     border-radius:15px;
+
     padding:22px 12px;
+
     text-align:center;
+
     transition:.2s;
 }
 
 .part:hover{
     transform:translateY(-4px);
+
     border-color:#bfdbfe;
-    box-shadow:0 12px 25px rgba(15,23,42,.07);
+
+    box-shadow:
+    0 12px 25px
+    rgba(15,23,42,.07);
 }
 
 .part-icon{
     font-size:33px;
+
     margin-bottom:10px;
 }
 
 .part strong{
     font-size:13px;
+
     display:block;
 }
 
 .part span{
     color:#94a3b8;
+
     font-size:11px;
 }
 
 
-/* =========================
+/* =====================================================
    CTA
-========================= */
+===================================================== */
 
 .cta{
     background:#0b1220;
+
     color:white;
 }
 
 .cta-box{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:30px;
 }
 
 .cta h2{
-    font-size:clamp(28px,4vw,43px);
+    font-size:
+    clamp(28px,4vw,43px);
+
     line-height:1.15;
+
     margin-bottom:10px;
 }
 
 .cta p{
     color:#94a3b8;
+
     max-width:650px;
 }
 
 .cta-buttons{
     display:flex;
+
     gap:10px;
+
     flex-wrap:wrap;
 }
 
 
-/* =========================
+/* =====================================================
    BOOKING
-========================= */
+===================================================== */
 
 .booking{
     background:#f8fafc;
@@ -1055,81 +1466,112 @@ section{
 
 .booking-grid{
     display:grid;
-    grid-template-columns:.75fr 1.25fr;
+
+    grid-template-columns:
+    .75fr 1.25fr;
+
     gap:45px;
+
     align-items:start;
 }
 
 .booking-info h2{
     font-size:40px;
+
     line-height:1.15;
+
     margin-bottom:15px;
 }
 
 .booking-info>p{
     color:#64748b;
+
     margin-bottom:25px;
 }
 
 .contact-list{
     display:grid;
+
     gap:14px;
 }
 
 .contact-item{
     display:flex;
+
     gap:13px;
+
     align-items:center;
 }
 
 .contact-item-icon{
     width:45px;
     height:45px;
+
     border-radius:12px;
+
     display:grid;
+
     place-items:center;
+
     background:#dbeafe;
+
     color:#2563eb;
 }
 
 .contact-item strong{
     display:block;
+
     font-size:13px;
 }
 
 .contact-item span{
     color:#64748b;
+
     font-size:12px;
 }
 
 .form-card{
     background:white;
+
     border:1px solid #e2e8f0;
+
     border-radius:20px;
+
     padding:30px;
-    box-shadow:0 15px 40px rgba(15,23,42,.06);
+
+    box-shadow:
+    0 15px 40px
+    rgba(15,23,42,.06);
 }
 
 .form-card h3{
     font-size:23px;
+
     margin-bottom:5px;
 }
 
 .form-card>p{
     color:#64748b;
+
     font-size:13px;
+
     margin-bottom:22px;
 }
 
 .form-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:16px;
 }
 
 .form-group{
     display:flex;
+
     flex-direction:column;
+
     gap:7px;
 }
 
@@ -1139,7 +1581,9 @@ section{
 
 .form-group label{
     font-size:12px;
+
     font-weight:700;
+
     color:#334155;
 }
 
@@ -1147,17 +1591,26 @@ section{
 .form-group select,
 .form-group textarea{
     width:100%;
-    border:1px solid #dbe3ed;
+
+    border:
+    1px solid #dbe3ed;
+
     border-radius:10px;
+
     padding:12px 13px;
+
     outline:none;
+
     background:#fff;
+
     color:#111827;
+
     transition:.2s;
 }
 
 .form-group textarea{
     min-height:110px;
+
     resize:vertical;
 }
 
@@ -1165,18 +1618,22 @@ section{
 .form-group select:focus,
 .form-group textarea:focus{
     border-color:#2563eb;
-    box-shadow:0 0 0 3px rgba(37,99,235,.08);
+
+    box-shadow:
+    0 0 0 3px
+    rgba(37,99,235,.08);
 }
 
 .form-submit{
     width:100%;
+
     margin-top:18px;
 }
 
 
-/* =========================
+/* =====================================================
    TESTIMONIAL
-========================= */
+===================================================== */
 
 .testimonials{
     background:white;
@@ -1184,59 +1641,78 @@ section{
 
 .testimonial-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:20px;
 }
 
 .review{
     padding:25px;
+
     border:1px solid #e5e7eb;
+
     border-radius:17px;
 }
 
 .stars{
     color:#f59e0b;
+
     margin-bottom:14px;
+
     letter-spacing:2px;
 }
 
 .review p{
     color:#475569;
+
     font-size:14px;
+
     margin-bottom:20px;
 }
 
 .customer{
     display:flex;
+
     align-items:center;
+
     gap:11px;
 }
 
 .avatar{
     width:42px;
     height:42px;
+
     border-radius:50%;
+
     background:#dbeafe;
+
     color:#2563eb;
+
     display:grid;
+
     place-items:center;
+
     font-weight:800;
 }
 
 .customer strong{
     display:block;
+
     font-size:13px;
 }
 
 .customer span{
     color:#94a3b8;
+
     font-size:11px;
 }
 
 
-/* =========================
+/* =====================================================
    FAQ
-========================= */
+===================================================== */
 
 .faq{
     background:#f8fafc;
@@ -1244,96 +1720,135 @@ section{
 
 .faq-list{
     max-width:800px;
+
     margin:auto;
+
     display:grid;
+
     gap:10px;
 }
 
 .faq-item{
     background:white;
+
     border:1px solid #e2e8f0;
+
     border-radius:12px;
+
     overflow:hidden;
 }
 
 .faq-question{
     width:100%;
+
     border:0;
+
     background:white;
+
     padding:18px 20px;
+
     text-align:left;
+
     cursor:pointer;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     font-weight:700;
+
     color:#1e293b;
 }
 
 .faq-answer{
     max-height:0;
+
     overflow:hidden;
+
     transition:.3s;
 }
 
 .faq-answer p{
-    padding:0 20px 18px;
+    padding:
+    0 20px 18px;
+
     color:#64748b;
+
     font-size:13px;
 }
 
-.faq-item.active .faq-answer{
+.faq-item.active
+.faq-answer{
     max-height:150px;
 }
 
-.faq-item.active .faq-question span{
+.faq-item.active
+.faq-question span{
     transform:rotate(45deg);
 }
 
 .faq-question span{
     font-size:24px;
+
     font-weight:300;
+
     transition:.2s;
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
     background:#07111f;
+
     color:white;
+
     padding:60px 0 25px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr 1fr;
+
+    grid-template-columns:
+    1.4fr 1fr 1fr 1fr;
+
     gap:40px;
+
     padding-bottom:45px;
 }
 
 .footer-brand p{
     color:#94a3b8;
+
     max-width:330px;
+
     font-size:13px;
-    margin:15px 0 20px;
+
+    margin:
+    15px 0 20px;
 }
 
 .footer-title{
     font-weight:800;
+
     margin-bottom:15px;
 }
 
 .footer-links{
     display:grid;
+
     gap:9px;
 }
 
 .footer-links a{
     color:#94a3b8;
+
     font-size:13px;
+
     transition:.2s;
 }
 
@@ -1342,34 +1857,55 @@ footer{
 }
 
 .footer-bottom{
-    border-top:1px solid rgba(255,255,255,.08);
+    border-top:
+    1px solid
+    rgba(255,255,255,.08);
+
     padding-top:22px;
+
     display:flex;
+
     justify-content:space-between;
+
     gap:15px;
+
     color:#64748b;
+
     font-size:12px;
 }
 
 
-/* =========================
+/* =====================================================
    FLOATING WHATSAPP
-========================= */
+===================================================== */
 
 .whatsapp{
     position:fixed;
+
     right:22px;
     bottom:22px;
+
     width:58px;
     height:58px;
+
     border-radius:50%;
+
     background:#22c55e;
+
     color:white;
+
     display:grid;
+
     place-items:center;
+
     font-size:27px;
+
     z-index:1500;
-    box-shadow:0 12px 30px rgba(34,197,94,.35);
+
+    box-shadow:
+    0 12px 30px
+    rgba(34,197,94,.35);
+
     transition:.25s;
 }
 
@@ -1378,61 +1914,87 @@ footer{
 }
 
 
-/* =========================
-   BACK TO TOP
-========================= */
+/* =====================================================
+   BACK TOP
+===================================================== */
 
 .back-top{
     position:fixed;
+
     right:25px;
     bottom:92px;
+
     width:42px;
     height:42px;
+
     border:0;
+
     border-radius:10px;
+
     background:#0f172a;
+
     color:white;
+
     cursor:pointer;
+
     opacity:0;
+
     pointer-events:none;
+
     transition:.25s;
+
     z-index:1400;
 }
 
 .back-top.show{
     opacity:1;
+
     pointer-events:auto;
 }
 
 
-/* =========================
+/* =====================================================
    TOAST
-========================= */
+===================================================== */
 
 .toast{
     position:fixed;
+
     left:50%;
+
     bottom:25px;
-    transform:translate(-50%,100px);
+
+    transform:
+    translate(-50%,100px);
+
     background:#0f172a;
+
     color:white;
+
     padding:13px 18px;
+
     border-radius:10px;
+
     font-size:13px;
+
     z-index:3000;
+
     opacity:0;
+
     transition:.3s;
 }
 
 .toast.show{
-    transform:translate(-50%,0);
+    transform:
+    translate(-50%,0);
+
     opacity:1;
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
 @media(max-width:1050px){
 
@@ -1441,15 +2003,18 @@ footer{
     }
 
     .service-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
     .parts-grid{
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:
+        repeat(3,1fr);
     }
 
     .footer-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
     }
 }
 
@@ -1470,17 +2035,30 @@ footer{
 
     .nav-links{
         position:absolute;
+
         left:4%;
         right:4%;
+
         top:75px;
+
         background:white;
-        border:1px solid #e2e8f0;
+
+        border:
+        1px solid #e2e8f0;
+
         border-radius:15px;
+
         padding:15px;
+
         display:none;
+
         flex-direction:column;
+
         align-items:stretch;
-        box-shadow:0 20px 40px rgba(15,23,42,.12);
+
+        box-shadow:
+        0 20px 40px
+        rgba(15,23,42,.12);
     }
 
     .nav-links.active{
@@ -1493,11 +2071,14 @@ footer{
 
     .hero-inner{
         grid-template-columns:1fr;
-        padding:60px 0 70px;
+
+        padding:
+        60px 0 70px;
     }
 
     .hero-content{
         padding:0;
+
         text-align:center;
     }
 
@@ -1516,12 +2097,16 @@ footer{
 
     .hero-device{
         max-width:560px;
+
         width:100%;
+
         margin:auto;
     }
 
     .trust-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+        1fr 1fr;
+
         padding:10px 0;
     }
 
@@ -1535,7 +2120,8 @@ footer{
 
     .trust-item:nth-child(1),
     .trust-item:nth-child(2){
-        border-bottom:1px solid #e5e7eb;
+        border-bottom:
+        1px solid #e5e7eb;
     }
 
     .about-grid,
@@ -1544,7 +2130,8 @@ footer{
     }
 
     .process-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+        1fr 1fr;
     }
 
     .process-card:nth-child(2)::after{
@@ -1553,7 +2140,9 @@ footer{
 
     .price-grid{
         grid-template-columns:1fr;
+
         max-width:520px;
+
         margin:auto;
     }
 
@@ -1567,6 +2156,7 @@ footer{
 
     .cta-box{
         flex-direction:column;
+
         align-items:flex-start;
     }
 }
@@ -1584,6 +2174,7 @@ footer{
 
     .hero h1{
         font-size:43px;
+
         letter-spacing:-1.5px;
     }
 
@@ -1623,7 +2214,9 @@ footer{
 
     .trust-item{
         border-right:0!important;
-        border-bottom:1px solid #e5e7eb!important;
+
+        border-bottom:
+        1px solid #e5e7eb!important;
     }
 
     .trust-item:last-child{
@@ -1652,7 +2245,8 @@ footer{
     }
 
     .parts-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
     .form-grid{
@@ -1701,40 +2295,57 @@ footer{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      TOP BAR
-========================= -->
+===================================================== -->
 
 <div class="topbar">
+
     <div class="container topbar-inner">
 
         <div class="top-info">
 
-            <span>📞 +880 1XXX-XXXXXX</span>
+            <span>
+                📞 +880 1XXX-XXXXXX
+            </span>
 
-            <span>📍 Your City, Bangladesh</span>
+            <span>
+                📍 Your City, Bangladesh
+            </span>
 
-            <span>🕒 Sat–Thu: 9:00 AM – 9:00 PM</span>
+            <span>
+                🕒 Sat–Thu: 9:00 AM – 9:00 PM
+            </span>
 
         </div>
 
+
         <div class="top-social">
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                YouTube
+            </a>
+
         </div>
 
     </div>
+
 </div>
 
 
 
-<!-- =========================
+<!-- =====================================================
      NAVBAR
-========================= -->
+===================================================== -->
 
 <header class="navbar">
 
     <div class="container nav-inner">
+
 
         <a href="#home" class="logo">
 
@@ -1744,9 +2355,13 @@ footer{
 
             <div class="logo-text">
 
-                <strong>TechCare</strong>
+                <strong>
+                    PARTHO
+                </strong>
 
-                <small>COMPUTER & SERVICE CENTER</small>
+                <small>
+                    COMPUTER & SERVICE CENTER
+                </small>
 
             </div>
 
@@ -1755,24 +2370,41 @@ footer{
 
         <nav class="nav-links" id="navLinks">
 
-            <a href="#home">Home</a>
+            <a href="#home">
+                Home
+            </a>
 
-            <a href="#services">Services</a>
+            <a href="#services">
+                Services
+            </a>
 
-            <a href="#about">About Us</a>
+            <a href="#about">
+                About Us
+            </a>
 
-            <a href="#packages">Packages</a>
+            <a href="#packages">
+                Packages
+            </a>
 
-            <a href="#parts">Parts</a>
+            <a href="#parts">
+                Parts
+            </a>
 
-            <a href="#contact" class="nav-cta">
+            <a
+                href="#contact"
+                class="nav-cta"
+            >
                 Book a Repair
             </a>
 
         </nav>
 
 
-        <button class="menu-btn" id="menuBtn">
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+        >
             ☰
         </button>
 
@@ -1782,83 +2414,140 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="hero" id="home">
 
     <div class="container hero-inner">
 
+
         <div class="hero-content">
 
+
             <div class="badge">
+
                 <span class="badge-dot"></span>
+
                 Professional Computer Repair & IT Support
+
             </div>
 
+
             <h1>
+
                 Your Computer.
-                <span>Our Expertise.</span>
+
+                <span>
+                    Our Expertise.
+                </span>
+
             </h1>
 
+
             <p>
-                Fast, reliable and affordable computer & laptop
-                repair services. From hardware problems to software
-                issues — we help keep your technology running smoothly.
+
+                Fast, reliable and affordable computer &
+                laptop repair services. From hardware problems
+                to software issues — PARTHO helps keep your
+                technology running smoothly.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#contact" class="btn btn-primary">
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary"
+                >
                     🔧 Book a Repair
                 </a>
 
-                <a href="tel:+8801XXXXXXXXX" class="btn btn-light">
+
+                <a
+                    href="tel:+8801XXXXXXXXX"
+                    class="btn btn-light"
+                >
                     📞 Call Now
                 </a>
+
 
             </div>
 
 
             <div class="hero-stats">
 
-                <div class="hero-stat">
-                    <strong>5+</strong>
-                    <span>Years Experience</span>
-                </div>
 
                 <div class="hero-stat">
-                    <strong>2K+</strong>
-                    <span>Devices Serviced</span>
+
+                    <strong>
+                        5+
+                    </strong>
+
+                    <span>
+                        Years Experience
+                    </span>
+
                 </div>
 
+
                 <div class="hero-stat">
-                    <strong>98%</strong>
-                    <span>Happy Customers</span>
+
+                    <strong>
+                        2K+
+                    </strong>
+
+                    <span>
+                        Devices Serviced
+                    </span>
+
                 </div>
+
+
+                <div class="hero-stat">
+
+                    <strong>
+                        98%
+                    </strong>
+
+                    <span>
+                        Happy Customers
+                    </span>
+
+                </div>
+
 
             </div>
 
         </div>
 
 
+
+        <!-- COMPUTER DEMO -->
+
         <div class="hero-device">
+
 
             <div class="monitor">
 
                 <div class="monitor-screen">
 
+
                     <div class="screen-top">
 
                         <div class="screen-dots">
+
                             <i></i>
                             <i></i>
                             <i></i>
+
                         </div>
 
                         <div class="screen-title">
-                            SYSTEM HEALTH
+                            PARTHO SYSTEM HEALTH
                         </div>
 
                     </div>
@@ -1866,41 +2555,80 @@ footer{
 
                     <div class="screen-main">
 
+
                         <div class="screen-card">
-                            <strong>98%</strong>
-                            <span>System Health</span>
+
+                            <strong>
+                                98%
+                            </strong>
+
+                            <span>
+                                System Health
+                            </span>
 
                             <div class="screen-bar">
                                 <div></div>
                             </div>
+
                         </div>
 
+
                         <div class="screen-card">
-                            <strong>24°C</strong>
-                            <span>CPU Temperature</span>
+
+                            <strong>
+                                24°C
+                            </strong>
+
+                            <span>
+                                CPU Temperature
+                            </span>
 
                             <div class="screen-bar">
+
                                 <div style="width:45%;"></div>
+
                             </div>
+
                         </div>
 
+
                         <div class="screen-card">
-                            <strong>SSD</strong>
-                            <span>Storage Status</span>
+
+                            <strong>
+                                SSD
+                            </strong>
+
+                            <span>
+                                Storage Status
+                            </span>
 
                             <div class="screen-bar">
+
                                 <div style="width:82%;"></div>
+
                             </div>
+
                         </div>
+
 
                         <div class="screen-card">
-                            <strong>OK</strong>
-                            <span>System Security</span>
+
+                            <strong>
+                                OK
+                            </strong>
+
+                            <span>
+                                System Security
+                            </span>
 
                             <div class="screen-bar">
+
                                 <div style="width:95%;"></div>
+
                             </div>
+
                         </div>
+
 
                     </div>
 
@@ -1919,8 +2647,15 @@ footer{
                 </div>
 
                 <div>
-                    PC Repair<br>
-                    <small>Professional Service</small>
+
+                    PC Repair
+
+                    <br>
+
+                    <small>
+                        Professional Service
+                    </small>
+
                 </div>
 
             </div>
@@ -1933,11 +2668,19 @@ footer{
                 </div>
 
                 <div>
-                    Service Warranty<br>
-                    <small>Customer Protection</small>
+
+                    Service Warranty
+
+                    <br>
+
+                    <small>
+                        Customer Protection
+                    </small>
+
                 </div>
 
             </div>
+
 
         </div>
 
@@ -1947,21 +2690,31 @@ footer{
 
 
 
-<!-- =========================
-     TRUST BAR
-========================= -->
+<!-- =====================================================
+     TRUST
+===================================================== -->
 
 <section class="trust">
 
     <div class="container trust-grid">
 
+
         <div class="trust-item">
 
-            <div class="trust-icon">🛠️</div>
+            <div class="trust-icon">
+                🛠️
+            </div>
 
             <div>
-                <strong>Expert Technicians</strong>
-                <span>Experienced team</span>
+
+                <strong>
+                    Expert Technicians
+                </strong>
+
+                <span>
+                    Experienced team
+                </span>
+
             </div>
 
         </div>
@@ -1969,11 +2722,20 @@ footer{
 
         <div class="trust-item">
 
-            <div class="trust-icon">⚡</div>
+            <div class="trust-icon">
+                ⚡
+            </div>
 
             <div>
-                <strong>Fast Service</strong>
-                <span>Quick turnaround</span>
+
+                <strong>
+                    Fast Service
+                </strong>
+
+                <span>
+                    Quick turnaround
+                </span>
+
             </div>
 
         </div>
@@ -1981,11 +2743,20 @@ footer{
 
         <div class="trust-item">
 
-            <div class="trust-icon">🛡️</div>
+            <div class="trust-icon">
+                🛡️
+            </div>
 
             <div>
-                <strong>Service Warranty</strong>
-                <span>Peace of mind</span>
+
+                <strong>
+                    Service Warranty
+                </strong>
+
+                <span>
+                    Peace of mind
+                </span>
+
             </div>
 
         </div>
@@ -1993,14 +2764,24 @@ footer{
 
         <div class="trust-item">
 
-            <div class="trust-icon">💰</div>
+            <div class="trust-icon">
+                💰
+            </div>
 
             <div>
-                <strong>Fair Pricing</strong>
-                <span>Affordable service</span>
+
+                <strong>
+                    Fair Pricing
+                </strong>
+
+                <span>
+                    Affordable service
+                </span>
+
             </div>
 
         </div>
+
 
     </div>
 
@@ -2008,13 +2789,17 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+===================================================== -->
 
-<section class="services" id="services">
+<section
+    class="services"
+    id="services"
+>
 
     <div class="container">
+
 
         <div class="section-head">
 
@@ -2027,8 +2812,9 @@ footer{
             </h2>
 
             <p>
-                Whether your computer is slow, damaged, infected
-                or simply needs an upgrade, our technicians can help.
+                Whether your computer is slow, damaged,
+                infected or simply needs an upgrade,
+                PARTHO technicians can help.
             </p>
 
         </div>
@@ -2043,7 +2829,9 @@ footer{
                     🖥️
                 </div>
 
-                <h3>Desktop PC Repair</h3>
+                <h3>
+                    Desktop PC Repair
+                </h3>
 
                 <p>
                     Diagnose and repair hardware,
@@ -2059,7 +2847,9 @@ footer{
                     💻
                 </div>
 
-                <h3>Laptop Repair</h3>
+                <h3>
+                    Laptop Repair
+                </h3>
 
                 <p>
                     Laptop screen, keyboard, battery,
@@ -2075,11 +2865,13 @@ footer{
                     ⚙️
                 </div>
 
-                <h3>Windows Installation</h3>
+                <h3>
+                    Windows Installation
+                </h3>
 
                 <p>
                     Windows installation, drivers,
-                    software setup and system configuration.
+                    software setup and configuration.
                 </p>
 
             </div>
@@ -2091,7 +2883,9 @@ footer{
                     🦠
                 </div>
 
-                <h3>Virus Removal</h3>
+                <h3>
+                    Virus Removal
+                </h3>
 
                 <p>
                     Malware cleanup, security checks
@@ -2107,10 +2901,12 @@ footer{
                     💾
                 </div>
 
-                <h3>Data Recovery</h3>
+                <h3>
+                    Data Recovery
+                </h3>
 
                 <p>
-                    Assistance with recovering important
+                    Assistance recovering important
                     files from HDD, SSD and storage devices.
                 </p>
 
@@ -2123,11 +2919,13 @@ footer{
                     🚀
                 </div>
 
-                <h3>PC Upgrade</h3>
+                <h3>
+                    PC Upgrade
+                </h3>
 
                 <p>
                     RAM, SSD, GPU, processor and
-                    other hardware upgrade solutions.
+                    hardware upgrade solutions.
                 </p>
 
             </div>
@@ -2139,7 +2937,9 @@ footer{
                     🌐
                 </div>
 
-                <h3>Networking</h3>
+                <h3>
+                    Networking
+                </h3>
 
                 <p>
                     Wi-Fi, router, LAN setup and
@@ -2155,7 +2955,9 @@ footer{
                     🖨️
                 </div>
 
-                <h3>Printer Service</h3>
+                <h3>
+                    Printer Service
+                </h3>
 
                 <p>
                     Printer setup, troubleshooting,
@@ -2173,11 +2975,14 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about"
+>
 
     <div class="container about-grid">
 
@@ -2185,6 +2990,7 @@ footer{
         <div class="about-visual">
 
             <div class="workshop">
+
 
                 <div class="pc-case">
 
@@ -2206,26 +3012,34 @@ footer{
 
                 <div class="workbench"></div>
 
+
             </div>
 
         </div>
 
 
+
         <div class="about-content">
 
+
             <div class="eyebrow">
-                About Our Service Center
+                About PARTHO
             </div>
+
 
             <h2>
                 Technology Problems?
                 We Have Solutions.
             </h2>
 
+
             <p>
-                TechCare Computer & Service Center provides
-                professional repair and IT support for individuals,
-                students, offices and local businesses.
+
+                PARTHO Computer & Service Center provides
+                professional repair and IT support for
+                individuals, students, offices and local
+                businesses.
+
             </p>
 
 
@@ -2239,10 +3053,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Professional Diagnosis</strong>
+
+                        <strong>
+                            Professional Diagnosis
+                        </strong>
+
                         <span>
                             We identify the actual problem before repair.
                         </span>
+
                     </div>
 
                 </div>
@@ -2255,10 +3074,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Quality Parts</strong>
+
+                        <strong>
+                            Quality Parts
+                        </strong>
+
                         <span>
                             Compatible and reliable replacement parts.
                         </span>
+
                     </div>
 
                 </div>
@@ -2271,10 +3095,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Transparent Pricing</strong>
+
+                        <strong>
+                            Transparent Pricing
+                        </strong>
+
                         <span>
                             Clear service costs without hidden charges.
                         </span>
+
                     </div>
 
                 </div>
@@ -2287,10 +3116,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Customer Support</strong>
+
+                        <strong>
+                            Customer Support
+                        </strong>
+
                         <span>
                             Support even after your device is repaired.
                         </span>
+
                     </div>
 
                 </div>
@@ -2299,9 +3133,13 @@ footer{
             </div>
 
 
-            <a href="#contact" class="btn btn-primary">
+            <a
+                href="#contact"
+                class="btn btn-primary"
+            >
                 Talk to a Technician
             </a>
+
 
         </div>
 
@@ -2311,13 +3149,14 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      PROCESS
-========================= -->
+===================================================== -->
 
 <section class="process">
 
     <div class="container">
+
 
         <div class="section-head">
 
@@ -2345,11 +3184,13 @@ footer{
                     01
                 </div>
 
-                <h3>Book a Repair</h3>
+                <h3>
+                    Book a Repair
+                </h3>
 
                 <p>
-                    Contact us by phone, WhatsApp
-                    or online booking.
+                    Contact us by phone,
+                    WhatsApp or online booking.
                 </p>
 
             </div>
@@ -2361,7 +3202,9 @@ footer{
                     02
                 </div>
 
-                <h3>Device Diagnosis</h3>
+                <h3>
+                    Device Diagnosis
+                </h3>
 
                 <p>
                     Our technician checks the device
@@ -2377,7 +3220,9 @@ footer{
                     03
                 </div>
 
-                <h3>Repair & Testing</h3>
+                <h3>
+                    Repair & Testing
+                </h3>
 
                 <p>
                     We repair the problem and
@@ -2393,7 +3238,9 @@ footer{
                     04
                 </div>
 
-                <h3>Collect Your Device</h3>
+                <h3>
+                    Collect Your Device
+                </h3>
 
                 <p>
                     Get your repaired device
@@ -2411,13 +3258,17 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      PACKAGES
-========================= -->
+===================================================== -->
 
-<section class="pricing" id="packages">
+<section
+    class="pricing"
+    id="packages"
+>
 
     <div class="container">
+
 
         <div class="section-head">
 
@@ -2430,7 +3281,8 @@ footer{
             </h2>
 
             <p>
-                Demo pricing — replace these prices with your shop's actual rates.
+                Demo pricing — replace these prices
+                with PARTHO's actual rates.
             </p>
 
         </div>
@@ -2441,34 +3293,55 @@ footer{
 
             <div class="price-card">
 
-                <h3>Basic PC Service</h3>
+                <h3>
+                    Basic PC Service
+                </h3>
 
                 <p>
                     For regular computer maintenance.
                 </p>
 
+
                 <div class="price">
+
                     ৳499
-                    <small>/ service</small>
+
+                    <small>
+                        / service
+                    </small>
+
                 </div>
 
 
                 <ul class="price-list">
 
-                    <li>PC Cleaning</li>
+                    <li>
+                        PC Cleaning
+                    </li>
 
-                    <li>Performance Check</li>
+                    <li>
+                        Performance Check
+                    </li>
 
-                    <li>Basic Software Check</li>
+                    <li>
+                        Basic Software Check
+                    </li>
 
-                    <li>System Health Report</li>
+                    <li>
+                        System Health Report
+                    </li>
 
-                    <li>Basic Troubleshooting</li>
+                    <li>
+                        Basic Troubleshooting
+                    </li>
 
                 </ul>
 
 
-                <a href="#contact" class="btn btn-outline">
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
+                >
                     Book Service
                 </a>
 
@@ -2476,42 +3349,68 @@ footer{
 
 
 
-            <div class="price-card featured">
+            <div
+                class="price-card featured"
+            >
 
                 <div class="popular">
                     Most Popular
                 </div>
 
-                <h3>Complete PC Care</h3>
+
+                <h3>
+                    Complete PC Care
+                </h3>
 
                 <p>
                     Full maintenance for home & office PCs.
                 </p>
 
+
                 <div class="price">
+
                     ৳999
-                    <small>/ service</small>
+
+                    <small>
+                        / service
+                    </small>
+
                 </div>
 
 
                 <ul class="price-list">
 
-                    <li>Deep PC Cleaning</li>
+                    <li>
+                        Deep PC Cleaning
+                    </li>
 
-                    <li>Windows Check</li>
+                    <li>
+                        Windows Check
+                    </li>
 
-                    <li>Driver Update</li>
+                    <li>
+                        Driver Update
+                    </li>
 
-                    <li>Performance Optimization</li>
+                    <li>
+                        Performance Optimization
+                    </li>
 
-                    <li>Virus & Security Check</li>
+                    <li>
+                        Virus & Security Check
+                    </li>
 
-                    <li>Basic Hardware Diagnosis</li>
+                    <li>
+                        Basic Hardware Diagnosis
+                    </li>
 
                 </ul>
 
 
-                <a href="#contact" class="btn btn-primary">
+                <a
+                    href="#contact"
+                    class="btn btn-primary"
+                >
                     Book Service
                 </a>
 
@@ -2521,36 +3420,59 @@ footer{
 
             <div class="price-card">
 
-                <h3>Premium Maintenance</h3>
+                <h3>
+                    Premium Maintenance
+                </h3>
 
                 <p>
                     For demanding users & businesses.
                 </p>
 
+
                 <div class="price">
+
                     ৳1,999
-                    <small>/ service</small>
+
+                    <small>
+                        / service
+                    </small>
+
                 </div>
 
 
                 <ul class="price-list">
 
-                    <li>Complete Hardware Check</li>
+                    <li>
+                        Complete Hardware Check
+                    </li>
 
-                    <li>Deep Cleaning</li>
+                    <li>
+                        Deep Cleaning
+                    </li>
 
-                    <li>Windows Optimization</li>
+                    <li>
+                        Windows Optimization
+                    </li>
 
-                    <li>Software Setup</li>
+                    <li>
+                        Software Setup
+                    </li>
 
-                    <li>Security Optimization</li>
+                    <li>
+                        Security Optimization
+                    </li>
 
-                    <li>Performance Testing</li>
+                    <li>
+                        Performance Testing
+                    </li>
 
                 </ul>
 
 
-                <a href="#contact" class="btn btn-outline">
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
+                >
                     Book Service
                 </a>
 
@@ -2565,13 +3487,17 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      PARTS
-========================= -->
+===================================================== -->
 
-<section class="parts" id="parts">
+<section
+    class="parts"
+    id="parts"
+>
 
     <div class="container">
+
 
         <div class="section-head">
 
@@ -2584,8 +3510,8 @@ footer{
             </h2>
 
             <p>
-                We can help you choose the right hardware
-                for your computer and budget.
+                We can help you choose the right
+                hardware for your computer and budget.
             </p>
 
         </div>
@@ -2595,44 +3521,104 @@ footer{
 
 
             <div class="part">
-                <div class="part-icon">💾</div>
-                <strong>SSD</strong>
-                <span>Fast Storage</span>
+
+                <div class="part-icon">
+                    💾
+                </div>
+
+                <strong>
+                    SSD
+                </strong>
+
+                <span>
+                    Fast Storage
+                </span>
+
             </div>
 
 
             <div class="part">
-                <div class="part-icon">🧠</div>
-                <strong>RAM</strong>
-                <span>Memory</span>
+
+                <div class="part-icon">
+                    🧠
+                </div>
+
+                <strong>
+                    RAM
+                </strong>
+
+                <span>
+                    Memory
+                </span>
+
             </div>
 
 
             <div class="part">
-                <div class="part-icon">💽</div>
-                <strong>HDD</strong>
-                <span>Storage</span>
+
+                <div class="part-icon">
+                    💽
+                </div>
+
+                <strong>
+                    HDD
+                </strong>
+
+                <span>
+                    Storage
+                </span>
+
             </div>
 
 
             <div class="part">
-                <div class="part-icon">🎮</div>
-                <strong>Graphics Card</strong>
-                <span>GPU</span>
+
+                <div class="part-icon">
+                    🎮
+                </div>
+
+                <strong>
+                    Graphics Card
+                </strong>
+
+                <span>
+                    GPU
+                </span>
+
             </div>
 
 
             <div class="part">
-                <div class="part-icon">⚡</div>
-                <strong>Power Supply</strong>
-                <span>PSU</span>
+
+                <div class="part-icon">
+                    ⚡
+                </div>
+
+                <strong>
+                    Power Supply
+                </strong>
+
+                <span>
+                    PSU
+                </span>
+
             </div>
 
 
             <div class="part">
-                <div class="part-icon">🖥️</div>
-                <strong>Monitor</strong>
-                <span>Display</span>
+
+                <div class="part-icon">
+                    🖥️
+                </div>
+
+                <strong>
+                    Monitor
+                </strong>
+
+                <span>
+                    Display
+                </span>
+
             </div>
 
 
@@ -2644,13 +3630,14 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      CTA
-========================= -->
+===================================================== -->
 
 <section class="cta">
 
     <div class="container cta-box">
+
 
         <div>
 
@@ -2659,8 +3646,9 @@ footer{
             </h2>
 
             <p>
-                Don't worry. Bring your device to our service center
-                or contact us for a quick diagnosis.
+                Don't worry. Bring your device to
+                PARTHO Computer & Service Center or
+                contact us for a quick diagnosis.
             </p>
 
         </div>
@@ -2668,15 +3656,23 @@ footer{
 
         <div class="cta-buttons">
 
-            <a href="tel:+8801XXXXXXXXX" class="btn btn-light">
+
+            <a
+                href="tel:+8801XXXXXXXXX"
+                class="btn btn-light"
+            >
                 📞 Call Technician
             </a>
 
-            <a href="https://wa.me/8801XXXXXXXXX"
-               target="_blank"
-               class="btn btn-primary">
+
+            <a
+                href="https://wa.me/8801XXXXXXXXX"
+                target="_blank"
+                class="btn btn-primary"
+            >
                 💬 WhatsApp Us
             </a>
+
 
         </div>
 
@@ -2686,28 +3682,34 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      BOOKING
-========================= -->
+===================================================== -->
 
-<section class="booking" id="contact">
+<section
+    class="booking"
+    id="contact"
+>
 
     <div class="container booking-grid">
 
 
         <div class="booking-info">
 
+
             <div class="eyebrow">
                 Repair Booking
             </div>
+
 
             <h2>
                 Tell Us What's Wrong
             </h2>
 
+
             <p>
-                Submit your device information and we'll
-                contact you to discuss the repair.
+                Submit your device information and
+                we'll contact you to discuss the repair.
             </p>
 
 
@@ -2721,8 +3723,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Call Us</strong>
-                        <span>+880 1XXX-XXXXXX</span>
+
+                        <strong>
+                            Call Us
+                        </strong>
+
+                        <span>
+                            +880 1XXX-XXXXXX
+                        </span>
+
                     </div>
 
                 </div>
@@ -2735,8 +3744,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>WhatsApp</strong>
-                        <span>Available for quick support</span>
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                        <span>
+                            Available for quick support
+                        </span>
+
                     </div>
 
                 </div>
@@ -2749,8 +3765,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Visit Our Shop</strong>
-                        <span>Your Market, Your Area, Bangladesh</span>
+
+                        <strong>
+                            Visit Our Shop
+                        </strong>
+
+                        <span>
+                            Your Market, Your Area, Bangladesh
+                        </span>
+
                     </div>
 
                 </div>
@@ -2763,8 +3786,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Opening Hours</strong>
-                        <span>Sat–Thu: 9:00 AM – 9:00 PM</span>
+
+                        <strong>
+                            Opening Hours
+                        </strong>
+
+                        <span>
+                            Sat–Thu: 9:00 AM – 9:00 PM
+                        </span>
+
                     </div>
 
                 </div>
@@ -2778,6 +3808,7 @@ footer{
 
         <div class="form-card">
 
+
             <h3>
                 Book Your Repair
             </h3>
@@ -2788,6 +3819,7 @@ footer{
 
 
             <form id="repairForm">
+
 
                 <div class="form-grid">
 
@@ -2830,7 +3862,10 @@ footer{
                             Device Type
                         </label>
 
-                        <select id="deviceType" required>
+                        <select
+                            id="deviceType"
+                            required
+                        >
 
                             <option value="">
                                 Select device
@@ -2867,7 +3902,10 @@ footer{
                             Service Needed
                         </label>
 
-                        <select id="serviceType" required>
+                        <select
+                            id="serviceType"
+                            required
+                        >
 
                             <option value="">
                                 Select service
@@ -2942,13 +3980,14 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      TESTIMONIALS
-========================= -->
+===================================================== -->
 
 <section class="testimonials">
 
     <div class="container">
+
 
         <div class="section-head">
 
@@ -2974,7 +4013,7 @@ footer{
 
                 <p>
                     “My computer was extremely slow.
-                    They upgraded my SSD and optimized
+                    PARTHO upgraded my SSD and optimized
                     Windows. The difference was amazing.”
                 </p>
 
@@ -2985,8 +4024,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Rahim Ahmed</strong>
-                        <span>Local Customer</span>
+
+                        <strong>
+                            Rahim Ahmed
+                        </strong>
+
+                        <span>
+                            Local Customer
+                        </span>
+
                     </div>
 
                 </div>
@@ -3013,8 +4059,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Sumaiya Khan</strong>
-                        <span>Laptop Customer</span>
+
+                        <strong>
+                            Sumaiya Khan
+                        </strong>
+
+                        <span>
+                            Laptop Customer
+                        </span>
+
                     </div>
 
                 </div>
@@ -3041,8 +4094,15 @@ footer{
                     </div>
 
                     <div>
-                        <strong>Mahfuz Hasan</strong>
-                        <span>Business Customer</span>
+
+                        <strong>
+                            Mahfuz Hasan
+                        </strong>
+
+                        <span>
+                            Business Customer
+                        </span>
+
                     </div>
 
                 </div>
@@ -3058,13 +4118,14 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      FAQ
-========================= -->
+===================================================== -->
 
 <section class="faq">
 
     <div class="container">
+
 
         <div class="section-head">
 
@@ -3088,16 +4149,18 @@ footer{
 
                     How long does a repair take?
 
-                    <span>+</span>
+                    <span>
+                        +
+                    </span>
 
                 </button>
 
                 <div class="faq-answer">
 
                     <p>
-                        Repair time depends on the problem and
-                        required parts. Many basic services can
-                        be completed on the same day.
+                        Repair time depends on the problem
+                        and required parts. Many basic services
+                        can be completed on the same day.
                     </p>
 
                 </div>
@@ -3111,15 +4174,17 @@ footer{
 
                     Do you provide a service warranty?
 
-                    <span>+</span>
+                    <span>
+                        +
+                    </span>
 
                 </button>
 
                 <div class="faq-answer">
 
                     <p>
-                        Yes. Warranty depends on the type of
-                        repair and replacement part used.
+                        Yes. Warranty depends on the type
+                        of repair and replacement part used.
                     </p>
 
                 </div>
@@ -3133,7 +4198,9 @@ footer{
 
                     Can I contact you before visiting?
 
-                    <span>+</span>
+                    <span>
+                        +
+                    </span>
 
                 </button>
 
@@ -3155,14 +4222,16 @@ footer{
 
                     Do you repair both desktop and laptop?
 
-                    <span>+</span>
+                    <span>
+                        +
+                    </span>
 
                 </button>
 
                 <div class="faq-answer">
 
                     <p>
-                        Yes. We provide service for desktops,
+                        Yes. PARTHO provides service for desktops,
                         laptops, monitors, printers and selected
                         computer accessories.
                     </p>
@@ -3180,20 +4249,25 @@ footer{
 
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
     <div class="container">
+
 
         <div class="footer-grid">
 
 
             <div class="footer-brand">
 
-                <a href="#home" class="logo">
+
+                <a
+                    href="#home"
+                    class="logo"
+                >
 
                     <div class="logo-icon">
                         ⚙
@@ -3202,7 +4276,7 @@ footer{
                     <div class="logo-text">
 
                         <strong style="color:white;">
-                            TechCare
+                            PARTHO
                         </strong>
 
                         <small style="color:#64748b;">
@@ -3228,6 +4302,7 @@ footer{
                 >
                     💬 WhatsApp
                 </a>
+
 
             </div>
 
@@ -3322,7 +4397,7 @@ footer{
                     </a>
 
                     <a href="#">
-                        ✉ support@example.com
+                        ✉ support@partho.com
                     </a>
 
                 </div>
@@ -3336,10 +4411,15 @@ footer{
         <div class="footer-bottom">
 
             <div>
+
                 © <span id="year"></span>
-                TechCare Computer & Service Center.
+
+                PARTHO Computer & Service Center.
+
                 All Rights Reserved.
+
             </div>
+
 
             <div>
                 Professional Computer Repair & IT Support
@@ -3353,9 +4433,9 @@ footer{
 
 
 
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
 
 <a
     href="https://wa.me/8801XXXXXXXXX"
@@ -3368,7 +4448,9 @@ footer{
 
 
 
-<!-- BACK TO TOP -->
+<!-- =====================================================
+     BACK TOP
+===================================================== -->
 
 <button
     class="back-top"
@@ -3379,9 +4461,15 @@ footer{
 </button>
 
 
-<!-- TOAST -->
 
-<div class="toast" id="toast">
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
     Repair request prepared successfully.
 </div>
 
@@ -3389,84 +4477,144 @@ footer{
 
 <script>
 
-/* =========================
+/* =====================================================
    MOBILE MENU
-========================= */
+===================================================== */
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+const menuBtn =
+    document.getElementById("menuBtn");
 
-menuBtn.addEventListener("click", function(){
+const navLinks =
+    document.getElementById("navLinks");
 
-    navLinks.classList.toggle("active");
+
+menuBtn.addEventListener(
+    "click",
+    function(){
+
+        navLinks.classList.toggle("active");
+
+    }
+);
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            navLinks.classList.remove("active");
+
+        }
+    );
 
 });
 
 
-document.querySelectorAll(".nav-links a").forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-        navLinks.classList.remove("active");
-
-    });
-
-});
-
-
-/* =========================
+/* =====================================================
    FAQ
-========================= */
+===================================================== */
 
-document.querySelectorAll(".faq-question").forEach(function(button){
+document
+.querySelectorAll(".faq-question")
+.forEach(function(button){
 
-    button.addEventListener("click", function(){
+    button.addEventListener(
+        "click",
+        function(){
 
-        const item = button.parentElement;
+            const item =
+                button.parentElement;
 
-        document.querySelectorAll(".faq-item").forEach(function(other){
 
-            if(other !== item){
-                other.classList.remove("active");
-            }
+            document
+            .querySelectorAll(".faq-item")
+            .forEach(function(other){
 
-        });
+                if(other !== item){
 
-        item.classList.toggle("active");
+                    other.classList.remove(
+                        "active"
+                    );
 
-    });
+                }
+
+            });
+
+
+            item.classList.toggle(
+                "active"
+            );
+
+        }
+    );
 
 });
 
 
-/* =========================
-   REPAIR FORM
-========================= */
+/* =====================================================
+   REPAIR FORM → WHATSAPP
+===================================================== */
 
-const repairForm = document.getElementById("repairForm");
-
-repairForm.addEventListener("submit", function(event){
-
-    event.preventDefault();
-
-    const name =
-        document.getElementById("customerName").value.trim();
-
-    const phone =
-        document.getElementById("customerPhone").value.trim();
-
-    const device =
-        document.getElementById("deviceType").value;
-
-    const service =
-        document.getElementById("serviceType").value;
-
-    const problem =
-        document.getElementById("problem").value.trim();
+const repairForm =
+    document.getElementById(
+        "repairForm"
+    );
 
 
-    const message =
-`Hello TechCare Computer & Service Center,
+repairForm.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        const name =
+            document
+            .getElementById(
+                "customerName"
+            )
+            .value.trim();
+
+
+        const phone =
+            document
+            .getElementById(
+                "customerPhone"
+            )
+            .value.trim();
+
+
+        const device =
+            document
+            .getElementById(
+                "deviceType"
+            )
+            .value;
+
+
+        const service =
+            document
+            .getElementById(
+                "serviceType"
+            )
+            .value;
+
+
+        const problem =
+            document
+            .getElementById(
+                "problem"
+            )
+            .value.trim();
+
+
+        const message =
+
+`Hello PARTHO Computer & Service Center,
 
 I would like to book a repair service.
 
@@ -3481,117 +4629,171 @@ ${problem}
 Please let me know the next steps.`;
 
 
-    const whatsappNumber = "8801XXXXXXXXX";
+        /*
+         * IMPORTANT:
+         * Replace 8801XXXXXXXXX
+         * with the actual WhatsApp number.
+         */
+
+        const whatsappNumber =
+            "8801XXXXXXXXX";
 
 
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(
+                message
+            );
 
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
 
 
-    showToast(
-        "Opening WhatsApp with your repair request..."
-    );
+        showToast(
+            "Opening WhatsApp with your repair request..."
+        );
 
-});
+    }
+);
 
 
-/* =========================
+/* =====================================================
    TOAST
-========================= */
+===================================================== */
 
 function showToast(message){
 
     const toast =
-        document.getElementById("toast");
+        document.getElementById(
+            "toast"
+        );
 
-    toast.textContent = message;
 
-    toast.classList.add("show");
+    toast.textContent =
+        message;
 
-    setTimeout(function(){
 
-        toast.classList.remove("show");
+    toast.classList.add(
+        "show"
+    );
 
-    },3000);
+
+    setTimeout(
+        function(){
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        3000
+    );
 
 }
 
 
-/* =========================
+/* =====================================================
    BACK TO TOP
-========================= */
+===================================================== */
 
 const backTop =
-    document.getElementById("backTop");
+    document.getElementById(
+        "backTop"
+    );
 
 
-window.addEventListener("scroll",function(){
+window.addEventListener(
+    "scroll",
+    function(){
 
-    if(window.scrollY > 500){
+        if(window.scrollY > 500){
 
-        backTop.classList.add("show");
-
-    }else{
-
-        backTop.classList.remove("show");
-
-    }
-
-});
-
-
-backTop.addEventListener("click",function(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-});
-
-
-/* =========================
-   CURRENT YEAR
-========================= */
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-/* =========================
-   SMOOTH NAVIGATION
-========================= */
-
-document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
-
-    anchor.addEventListener("click",function(event){
-
-        const target =
-            document.querySelector(
-                this.getAttribute("href")
+            backTop.classList.add(
+                "show"
             );
 
-        if(target){
+        }else{
 
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
-            });
+            backTop.classList.remove(
+                "show"
+            );
 
         }
 
-    });
+    }
+);
+
+
+backTop.addEventListener(
+    "click",
+    function(){
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+/* =====================================================
+   SMOOTH ANCHOR
+===================================================== */
+
+document
+.querySelectorAll(
+    'a[href^="#"]'
+)
+.forEach(function(anchor){
+
+    anchor.addEventListener(
+        "click",
+        function(event){
+
+            const target =
+                document.querySelector(
+                    this.getAttribute(
+                        "href"
+                    )
+                );
+
+
+            if(target){
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+
+                    behavior:"smooth",
+
+                    block:"start"
+
+                });
+
+            }
+
+        }
+    );
 
 });
 
@@ -3599,3 +4801,4 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
 
 </body>
 </html>
+```
