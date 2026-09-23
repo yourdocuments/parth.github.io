@@ -1,0 +1,3601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TechCare Computer & Service Center</title>
+
+<meta name="description" content="Professional computer repair, laptop service, PC upgrade, software installation, data recovery and IT support.">
+
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+<rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%220b1220%22/>
+<text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22>⚙</text>
+</svg>">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    background:#f5f7fb;
+    color:#111827;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#0b1220;
+    color:#dbeafe;
+    font-size:14px;
+}
+
+.topbar-inner{
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.top-info{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.top-info span{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.top-social{
+    display:flex;
+    gap:12px;
+}
+
+.top-social a{
+    opacity:.85;
+    transition:.2s;
+}
+
+.top-social a:hover{
+    opacity:1;
+    color:#38bdf8;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e5e7eb;
+}
+
+.nav-inner{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    color:#fff;
+    font-size:25px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+.logo-text strong{
+    display:block;
+    font-size:19px;
+    line-height:1.1;
+}
+
+.logo-text small{
+    color:#64748b;
+    font-size:11px;
+    letter-spacing:1.5px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#334155;
+    font-size:14px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+.nav-cta{
+    padding:11px 18px;
+    background:#2563eb;
+    color:white!important;
+    border-radius:10px;
+}
+
+.nav-cta:hover{
+    background:#1d4ed8;
+}
+
+.menu-btn{
+    display:none;
+    width:42px;
+    height:42px;
+    border:1px solid #e2e8f0;
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:22px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 85% 20%,rgba(14,165,233,.18),transparent 28%),
+        radial-gradient(circle at 10% 90%,rgba(37,99,235,.15),transparent 30%),
+        #07111f;
+
+    color:white;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-200px;
+    top:-220px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    left:-500px;
+    bottom:-500px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+}
+
+.hero-inner{
+    min-height:620px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:50px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    padding:70px 0;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.06);
+    border-radius:999px;
+    font-size:13px;
+    color:#bae6fd;
+    margin-bottom:20px;
+}
+
+.badge-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#22c55e;
+    box-shadow:0 0 0 5px rgba(34,197,94,.1);
+}
+
+.hero h1{
+    font-size:clamp(40px,5vw,68px);
+    line-height:1.03;
+    letter-spacing:-2.5px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:610px;
+    color:#b8c7d9;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:14px 21px;
+    border-radius:11px;
+    font-weight:700;
+    border:none;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.btn-light{
+    background:white;
+    color:#0f172a;
+}
+
+.btn-light:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid #cbd5e1;
+    background:white;
+    color:#1e293b;
+}
+
+.btn-outline:hover{
+    border-color:#2563eb;
+    color:#2563eb;
+}
+
+
+/* =========================
+   HERO COMPUTER
+========================= */
+
+.hero-device{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.monitor{
+    width:min(480px,100%);
+    background:#101b2d;
+    border:8px solid #1e293b;
+    border-radius:20px;
+    padding:10px;
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45),
+        0 0 0 1px rgba(255,255,255,.08);
+    transform:perspective(1000px) rotateY(-4deg);
+}
+
+.monitor-screen{
+    min-height:290px;
+    border-radius:10px;
+    background:
+        linear-gradient(135deg,rgba(37,99,235,.3),rgba(6,182,212,.12)),
+        #07111f;
+    padding:25px;
+    overflow:hidden;
+}
+
+.screen-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.screen-dots{
+    display:flex;
+    gap:6px;
+}
+
+.screen-dots i{
+    width:8px;
+    height:8px;
+    background:#475569;
+    border-radius:50%;
+}
+
+.screen-title{
+    color:#94a3b8;
+    font-size:11px;
+}
+
+.screen-main{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.screen-card{
+    padding:18px;
+    border-radius:12px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.screen-card strong{
+    display:block;
+    color:white;
+    font-size:26px;
+}
+
+.screen-card span{
+    color:#94a3b8;
+    font-size:11px;
+}
+
+.screen-bar{
+    height:8px;
+    border-radius:10px;
+    background:#1e293b;
+    margin-top:12px;
+    overflow:hidden;
+}
+
+.screen-bar div{
+    width:75%;
+    height:100%;
+    background:#22c55e;
+}
+
+.monitor-stand{
+    width:120px;
+    height:65px;
+    margin:auto;
+    position:relative;
+}
+
+.monitor-stand::before{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:50px;
+    background:#1e293b;
+    left:52px;
+}
+
+.monitor-stand::after{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:12px;
+    background:#1e293b;
+    bottom:0;
+    left:-10px;
+    border-radius:10px;
+}
+
+.floating-card{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:13px 16px;
+    background:white;
+    color:#111827;
+    border-radius:13px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    font-size:13px;
+    font-weight:700;
+}
+
+.float-icon{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:19px;
+}
+
+.float-one{
+    left:-20px;
+    top:40px;
+}
+
+.float-two{
+    right:-15px;
+    bottom:40px;
+}
+
+.hero-stats{
+    display:flex;
+    gap:35px;
+    margin-top:45px;
+    flex-wrap:wrap;
+}
+
+.hero-stat strong{
+    display:block;
+    font-size:24px;
+}
+
+.hero-stat span{
+    color:#94a3b8;
+    font-size:12px;
+}
+
+
+/* =========================
+   TRUST BAR
+========================= */
+
+.trust{
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.trust-grid{
+    min-height:90px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    align-items:center;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    border-right:1px solid #e5e7eb;
+}
+
+.trust-item:last-child{
+    border-right:0;
+}
+
+.trust-icon{
+    font-size:26px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:14px;
+}
+
+.trust-item span{
+    color:#64748b;
+    font-size:12px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-head{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 48px;
+}
+
+.eyebrow{
+    color:#2563eb;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.section-head h2{
+    font-size:clamp(30px,4vw,43px);
+    line-height:1.15;
+    letter-spacing:-1px;
+    margin-bottom:14px;
+}
+
+.section-head p{
+    color:#64748b;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#fff;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service-card{
+    padding:25px;
+    border:1px solid #e5e7eb;
+    border-radius:17px;
+    background:white;
+    transition:.25s;
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card::after{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:80px;
+    right:-40px;
+    bottom:-40px;
+    border-radius:50%;
+    background:#eff6ff;
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    border-color:#bfdbfe;
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
+
+.service-card:hover::after{
+    transform:scale(2);
+}
+
+.service-icon{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:26px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+}
+
+.service-card h3{
+    font-size:17px;
+    margin-bottom:8px;
+    position:relative;
+    z-index:2;
+}
+
+.service-card p{
+    color:#64748b;
+    font-size:13px;
+    position:relative;
+    z-index:2;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#f8fafc;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.about-visual{
+    position:relative;
+}
+
+.workshop{
+    background:#0f172a;
+    border-radius:25px;
+    min-height:440px;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.workshop::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.08);
+    top:-120px;
+    right:-100px;
+}
+
+.workbench{
+    position:absolute;
+    left:35px;
+    right:35px;
+    bottom:70px;
+    height:80px;
+    background:#334155;
+    border-radius:12px;
+}
+
+.pc-case{
+    position:absolute;
+    width:140px;
+    height:230px;
+    left:80px;
+    bottom:145px;
+    border-radius:14px;
+    background:#1e293b;
+    border:3px solid #475569;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.pc-glass{
+    margin:14px;
+    height:175px;
+    border-radius:8px;
+    background:
+        radial-gradient(circle at 50% 50%,#38bdf8 0 5%,transparent 6%),
+        radial-gradient(circle at 50% 50%,rgba(56,189,248,.25) 0 30%,transparent 31%),
+        #0b1220;
+    border:1px solid #334155;
+}
+
+.pc-light{
+    position:absolute;
+    width:7px;
+    height:7px;
+    background:#22c55e;
+    border-radius:50%;
+    bottom:18px;
+    left:18px;
+}
+
+.laptop{
+    position:absolute;
+    width:220px;
+    height:145px;
+    right:65px;
+    bottom:150px;
+    background:#cbd5e1;
+    border-radius:12px 12px 4px 4px;
+    transform:perspective(500px) rotateY(-8deg);
+}
+
+.laptop-screen{
+    margin:9px;
+    height:110px;
+    border-radius:7px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+.laptop-base{
+    position:absolute;
+    width:250px;
+    height:13px;
+    background:#94a3b8;
+    bottom:-12px;
+    left:-15px;
+    border-radius:0 0 10px 10px;
+}
+
+.about-content h2{
+    font-size:clamp(30px,4vw,44px);
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.about-content>p{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.check-list{
+    display:grid;
+    gap:14px;
+    margin-bottom:28px;
+}
+
+.check{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.check-icon{
+    width:24px;
+    height:24px;
+    flex:0 0 24px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#dcfce7;
+    color:#16a34a;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.check strong{
+    display:block;
+    font-size:14px;
+}
+
+.check span{
+    color:#64748b;
+    font-size:13px;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process{
+    background:white;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    text-align:center;
+    padding:28px 18px;
+    position:relative;
+}
+
+.process-number{
+    width:62px;
+    height:62px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#eff6ff;
+    color:#2563eb;
+    font-weight:800;
+    font-size:19px;
+    border:6px solid #dbeafe;
+}
+
+.process-card h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.process-card p{
+    color:#64748b;
+    font-size:13px;
+}
+
+.process-card:not(:last-child)::after{
+    content:"→";
+    position:absolute;
+    right:-14px;
+    top:44px;
+    color:#94a3b8;
+    font-size:22px;
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing{
+    background:#f8fafc;
+}
+
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.price-card{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+}
+
+.price-card.featured{
+    border:2px solid #2563eb;
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(37,99,235,.13);
+}
+
+.popular{
+    position:absolute;
+    right:20px;
+    top:20px;
+    background:#2563eb;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.price-card h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.price-card>p{
+    color:#64748b;
+    font-size:13px;
+}
+
+.price{
+    margin:22px 0;
+    font-size:35px;
+    font-weight:800;
+}
+
+.price small{
+    font-size:12px;
+    color:#64748b;
+    font-weight:500;
+}
+
+.price-list{
+    display:grid;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.price-list li{
+    list-style:none;
+    font-size:13px;
+    color:#475569;
+}
+
+.price-list li::before{
+    content:"✓";
+    color:#16a34a;
+    font-weight:800;
+    margin-right:9px;
+}
+
+
+/* =========================
+   PARTS
+========================= */
+
+.parts{
+    background:white;
+}
+
+.parts-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+}
+
+.part{
+    border:1px solid #e5e7eb;
+    border-radius:15px;
+    padding:22px 12px;
+    text-align:center;
+    transition:.2s;
+}
+
+.part:hover{
+    transform:translateY(-4px);
+    border-color:#bfdbfe;
+    box-shadow:0 12px 25px rgba(15,23,42,.07);
+}
+
+.part-icon{
+    font-size:33px;
+    margin-bottom:10px;
+}
+
+.part strong{
+    font-size:13px;
+    display:block;
+}
+
+.part span{
+    color:#94a3b8;
+    font-size:11px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#0b1220;
+    color:white;
+}
+
+.cta-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.cta h2{
+    font-size:clamp(28px,4vw,43px);
+    line-height:1.15;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#94a3b8;
+    max-width:650px;
+}
+
+.cta-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking{
+    background:#f8fafc;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:45px;
+    align-items:start;
+}
+
+.booking-info h2{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:15px;
+}
+
+.booking-info>p{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.contact-list{
+    display:grid;
+    gap:14px;
+}
+
+.contact-item{
+    display:flex;
+    gap:13px;
+    align-items:center;
+}
+
+.contact-item-icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.contact-item strong{
+    display:block;
+    font-size:13px;
+}
+
+.contact-item span{
+    color:#64748b;
+    font-size:12px;
+}
+
+.form-card{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(15,23,42,.06);
+}
+
+.form-card h3{
+    font-size:23px;
+    margin-bottom:5px;
+}
+
+.form-card>p{
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    font-size:12px;
+    font-weight:700;
+    color:#334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    border:1px solid #dbe3ed;
+    border-radius:10px;
+    padding:12px 13px;
+    outline:none;
+    background:#fff;
+    color:#111827;
+    transition:.2s;
+}
+
+.form-group textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.08);
+}
+
+.form-submit{
+    width:100%;
+    margin-top:18px;
+}
+
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
+.testimonials{
+    background:white;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    padding:25px;
+    border:1px solid #e5e7eb;
+    border-radius:17px;
+}
+
+.stars{
+    color:#f59e0b;
+    margin-bottom:14px;
+    letter-spacing:2px;
+}
+
+.review p{
+    color:#475569;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.customer{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#dbeafe;
+    color:#2563eb;
+    display:grid;
+    place-items:center;
+    font-weight:800;
+}
+
+.customer strong{
+    display:block;
+    font-size:13px;
+}
+
+.customer span{
+    color:#94a3b8;
+    font-size:11px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    background:#f8fafc;
+}
+
+.faq-list{
+    max-width:800px;
+    margin:auto;
+    display:grid;
+    gap:10px;
+}
+
+.faq-item{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+    border:0;
+    background:white;
+    padding:18px 20px;
+    text-align:left;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-answer p{
+    padding:0 20px 18px;
+    color:#64748b;
+    font-size:13px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:150px;
+}
+
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
+
+.faq-question span{
+    font-size:24px;
+    font-weight:300;
+    transition:.2s;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#07111f;
+    color:white;
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:45px;
+}
+
+.footer-brand p{
+    color:#94a3b8;
+    max-width:330px;
+    font-size:13px;
+    margin:15px 0 20px;
+}
+
+.footer-title{
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.footer-links{
+    display:grid;
+    gap:9px;
+}
+
+.footer-links a{
+    color:#94a3b8;
+    font-size:13px;
+    transition:.2s;
+}
+
+.footer-links a:hover{
+    color:#38bdf8;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    color:#64748b;
+    font-size:12px;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#22c55e;
+    color:white;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+    z-index:1500;
+    box-shadow:0 12px 30px rgba(34,197,94,.35);
+    transition:.25s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-top{
+    position:fixed;
+    right:25px;
+    bottom:92px;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:.25s;
+    z-index:1400;
+}
+
+.back-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:25px;
+    transform:translate(-50%,100px);
+    background:#0f172a;
+    color:white;
+    padding:13px 18px;
+    border-radius:10px;
+    font-size:13px;
+    z-index:3000;
+    opacity:0;
+    transition:.3s;
+}
+
+.toast.show{
+    transform:translate(-50%,0);
+    opacity:1;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .parts-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:850px){
+
+    .top-info span:nth-child(2){
+        display:none;
+    }
+
+    .nav-inner{
+        min-height:68px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        left:4%;
+        right:4%;
+        top:75px;
+        background:white;
+        border:1px solid #e2e8f0;
+        border-radius:15px;
+        padding:15px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        box-shadow:0 20px 40px rgba(15,23,42,.12);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:10px;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        padding:60px 0 70px;
+    }
+
+    .hero-content{
+        padding:0;
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-stats{
+        justify-content:center;
+    }
+
+    .hero-device{
+        max-width:560px;
+        width:100%;
+        margin:auto;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+        padding:10px 0;
+    }
+
+    .trust-item{
+        min-height:65px;
+    }
+
+    .trust-item:nth-child(2){
+        border-right:0;
+    }
+
+    .trust-item:nth-child(1),
+    .trust-item:nth-child(2){
+        border-bottom:1px solid #e5e7eb;
+    }
+
+    .about-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-card:nth-child(2)::after{
+        display:none;
+    }
+
+    .price-grid{
+        grid-template-columns:1fr;
+        max-width:520px;
+        margin:auto;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+
+@media(max-width:600px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .topbar{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-1.5px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-stats{
+        gap:20px;
+    }
+
+    .monitor{
+        transform:none;
+    }
+
+    .monitor-screen{
+        min-height:240px;
+    }
+
+    .floating-card{
+        transform:scale(.85);
+    }
+
+    .float-one{
+        left:-5px;
+        top:20px;
+    }
+
+    .float-two{
+        right:-5px;
+        bottom:20px;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-item{
+        border-right:0!important;
+        border-bottom:1px solid #e5e7eb!important;
+    }
+
+    .trust-item:last-child{
+        border-bottom:0!important;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-visual{
+        display:none;
+    }
+
+    .about-content h2,
+    .booking-info h2{
+        font-size:32px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-card::after{
+        display:none!important;
+    }
+
+    .parts-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .form-card{
+        padding:20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+
+    .cta-buttons{
+        width:100%;
+    }
+
+    .cta-buttons .btn{
+        width:100%;
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:15px;
+    }
+
+    .back-top{
+        right:15px;
+        bottom:82px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <div class="top-info">
+
+            <span>📞 +880 1XXX-XXXXXX</span>
+
+            <span>📍 Your City, Bangladesh</span>
+
+            <span>🕒 Sat–Thu: 9:00 AM – 9:00 PM</span>
+
+        </div>
+
+        <div class="top-social">
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                ⚙
+            </div>
+
+            <div class="logo-text">
+
+                <strong>TechCare</strong>
+
+                <small>COMPUTER & SERVICE CENTER</small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#packages">Packages</a>
+
+            <a href="#parts">Parts</a>
+
+            <a href="#contact" class="nav-cta">
+                Book a Repair
+            </a>
+
+        </nav>
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-inner">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Professional Computer Repair & IT Support
+            </div>
+
+            <h1>
+                Your Computer.
+                <span>Our Expertise.</span>
+            </h1>
+
+            <p>
+                Fast, reliable and affordable computer & laptop
+                repair services. From hardware problems to software
+                issues — we help keep your technology running smoothly.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    🔧 Book a Repair
+                </a>
+
+                <a href="tel:+8801XXXXXXXXX" class="btn btn-light">
+                    📞 Call Now
+                </a>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>5+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>2K+</strong>
+                    <span>Devices Serviced</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>98%</strong>
+                    <span>Happy Customers</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-device">
+
+            <div class="monitor">
+
+                <div class="monitor-screen">
+
+                    <div class="screen-top">
+
+                        <div class="screen-dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="screen-title">
+                            SYSTEM HEALTH
+                        </div>
+
+                    </div>
+
+
+                    <div class="screen-main">
+
+                        <div class="screen-card">
+                            <strong>98%</strong>
+                            <span>System Health</span>
+
+                            <div class="screen-bar">
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <div class="screen-card">
+                            <strong>24°C</strong>
+                            <span>CPU Temperature</span>
+
+                            <div class="screen-bar">
+                                <div style="width:45%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="screen-card">
+                            <strong>SSD</strong>
+                            <span>Storage Status</span>
+
+                            <div class="screen-bar">
+                                <div style="width:82%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="screen-card">
+                            <strong>OK</strong>
+                            <span>System Security</span>
+
+                            <div class="screen-bar">
+                                <div style="width:95%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="monitor-stand"></div>
+
+
+            <div class="floating-card float-one">
+
+                <div class="float-icon">
+                    🔧
+                </div>
+
+                <div>
+                    PC Repair<br>
+                    <small>Professional Service</small>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card float-two">
+
+                <div class="float-icon">
+                    ✓
+                </div>
+
+                <div>
+                    Service Warranty<br>
+                    <small>Customer Protection</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TRUST BAR
+========================= -->
+
+<section class="trust">
+
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+
+            <div class="trust-icon">🛠️</div>
+
+            <div>
+                <strong>Expert Technicians</strong>
+                <span>Experienced team</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">⚡</div>
+
+            <div>
+                <strong>Fast Service</strong>
+                <span>Quick turnaround</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">🛡️</div>
+
+            <div>
+                <strong>Service Warranty</strong>
+                <span>Peace of mind</span>
+            </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <div class="trust-icon">💰</div>
+
+            <div>
+                <strong>Fair Pricing</strong>
+                <span>Affordable service</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                What We Do
+            </div>
+
+            <h2>
+                Complete Computer Repair Services
+            </h2>
+
+            <p>
+                Whether your computer is slow, damaged, infected
+                or simply needs an upgrade, our technicians can help.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🖥️
+                </div>
+
+                <h3>Desktop PC Repair</h3>
+
+                <p>
+                    Diagnose and repair hardware,
+                    power, display and performance issues.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h3>Laptop Repair</h3>
+
+                <p>
+                    Laptop screen, keyboard, battery,
+                    charging and motherboard service.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙️
+                </div>
+
+                <h3>Windows Installation</h3>
+
+                <p>
+                    Windows installation, drivers,
+                    software setup and system configuration.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🦠
+                </div>
+
+                <h3>Virus Removal</h3>
+
+                <p>
+                    Malware cleanup, security checks
+                    and computer performance optimization.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💾
+                </div>
+
+                <h3>Data Recovery</h3>
+
+                <p>
+                    Assistance with recovering important
+                    files from HDD, SSD and storage devices.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚀
+                </div>
+
+                <h3>PC Upgrade</h3>
+
+                <p>
+                    RAM, SSD, GPU, processor and
+                    other hardware upgrade solutions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>Networking</h3>
+
+                <p>
+                    Wi-Fi, router, LAN setup and
+                    small office network support.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🖨️
+                </div>
+
+                <h3>Printer Service</h3>
+
+                <p>
+                    Printer setup, troubleshooting,
+                    connectivity and maintenance.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about-visual">
+
+            <div class="workshop">
+
+                <div class="pc-case">
+
+                    <div class="pc-glass"></div>
+
+                    <div class="pc-light"></div>
+
+                </div>
+
+
+                <div class="laptop">
+
+                    <div class="laptop-screen"></div>
+
+                    <div class="laptop-base"></div>
+
+                </div>
+
+
+                <div class="workbench"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="eyebrow">
+                About Our Service Center
+            </div>
+
+            <h2>
+                Technology Problems?
+                We Have Solutions.
+            </h2>
+
+            <p>
+                TechCare Computer & Service Center provides
+                professional repair and IT support for individuals,
+                students, offices and local businesses.
+            </p>
+
+
+            <div class="check-list">
+
+
+                <div class="check">
+
+                    <div class="check-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Professional Diagnosis</strong>
+                        <span>
+                            We identify the actual problem before repair.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="check">
+
+                    <div class="check-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Quality Parts</strong>
+                        <span>
+                            Compatible and reliable replacement parts.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="check">
+
+                    <div class="check-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Transparent Pricing</strong>
+                        <span>
+                            Clear service costs without hidden charges.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="check">
+
+                    <div class="check-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Customer Support</strong>
+                        <span>
+                            Support even after your device is repaired.
+                        </span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <a href="#contact" class="btn btn-primary">
+                Talk to a Technician
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Simple Process
+            </div>
+
+            <h2>
+                How Our Repair Service Works
+            </h2>
+
+            <p>
+                Getting your computer fixed is simple.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>Book a Repair</h3>
+
+                <p>
+                    Contact us by phone, WhatsApp
+                    or online booking.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>Device Diagnosis</h3>
+
+                <p>
+                    Our technician checks the device
+                    and identifies the issue.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>Repair & Testing</h3>
+
+                <p>
+                    We repair the problem and
+                    test the device carefully.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>Collect Your Device</h3>
+
+                <p>
+                    Get your repaired device
+                    with service details.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PACKAGES
+========================= -->
+
+<section class="pricing" id="packages">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Service Packages
+            </div>
+
+            <h2>
+                Simple & Transparent Packages
+            </h2>
+
+            <p>
+                Demo pricing — replace these prices with your shop's actual rates.
+            </p>
+
+        </div>
+
+
+        <div class="price-grid">
+
+
+            <div class="price-card">
+
+                <h3>Basic PC Service</h3>
+
+                <p>
+                    For regular computer maintenance.
+                </p>
+
+                <div class="price">
+                    ৳499
+                    <small>/ service</small>
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>PC Cleaning</li>
+
+                    <li>Performance Check</li>
+
+                    <li>Basic Software Check</li>
+
+                    <li>System Health Report</li>
+
+                    <li>Basic Troubleshooting</li>
+
+                </ul>
+
+
+                <a href="#contact" class="btn btn-outline">
+                    Book Service
+                </a>
+
+            </div>
+
+
+
+            <div class="price-card featured">
+
+                <div class="popular">
+                    Most Popular
+                </div>
+
+                <h3>Complete PC Care</h3>
+
+                <p>
+                    Full maintenance for home & office PCs.
+                </p>
+
+                <div class="price">
+                    ৳999
+                    <small>/ service</small>
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>Deep PC Cleaning</li>
+
+                    <li>Windows Check</li>
+
+                    <li>Driver Update</li>
+
+                    <li>Performance Optimization</li>
+
+                    <li>Virus & Security Check</li>
+
+                    <li>Basic Hardware Diagnosis</li>
+
+                </ul>
+
+
+                <a href="#contact" class="btn btn-primary">
+                    Book Service
+                </a>
+
+            </div>
+
+
+
+            <div class="price-card">
+
+                <h3>Premium Maintenance</h3>
+
+                <p>
+                    For demanding users & businesses.
+                </p>
+
+                <div class="price">
+                    ৳1,999
+                    <small>/ service</small>
+                </div>
+
+
+                <ul class="price-list">
+
+                    <li>Complete Hardware Check</li>
+
+                    <li>Deep Cleaning</li>
+
+                    <li>Windows Optimization</li>
+
+                    <li>Software Setup</li>
+
+                    <li>Security Optimization</li>
+
+                    <li>Performance Testing</li>
+
+                </ul>
+
+
+                <a href="#contact" class="btn btn-outline">
+                    Book Service
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PARTS
+========================= -->
+
+<section class="parts" id="parts">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Computer Parts
+            </div>
+
+            <h2>
+                Upgrade Your Computer
+            </h2>
+
+            <p>
+                We can help you choose the right hardware
+                for your computer and budget.
+            </p>
+
+        </div>
+
+
+        <div class="parts-grid">
+
+
+            <div class="part">
+                <div class="part-icon">💾</div>
+                <strong>SSD</strong>
+                <span>Fast Storage</span>
+            </div>
+
+
+            <div class="part">
+                <div class="part-icon">🧠</div>
+                <strong>RAM</strong>
+                <span>Memory</span>
+            </div>
+
+
+            <div class="part">
+                <div class="part-icon">💽</div>
+                <strong>HDD</strong>
+                <span>Storage</span>
+            </div>
+
+
+            <div class="part">
+                <div class="part-icon">🎮</div>
+                <strong>Graphics Card</strong>
+                <span>GPU</span>
+            </div>
+
+
+            <div class="part">
+                <div class="part-icon">⚡</div>
+                <strong>Power Supply</strong>
+                <span>PSU</span>
+            </div>
+
+
+            <div class="part">
+                <div class="part-icon">🖥️</div>
+                <strong>Monitor</strong>
+                <span>Display</span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container cta-box">
+
+        <div>
+
+            <h2>
+                Computer Not Working?
+            </h2>
+
+            <p>
+                Don't worry. Bring your device to our service center
+                or contact us for a quick diagnosis.
+            </p>
+
+        </div>
+
+
+        <div class="cta-buttons">
+
+            <a href="tel:+8801XXXXXXXXX" class="btn btn-light">
+                📞 Call Technician
+            </a>
+
+            <a href="https://wa.me/8801XXXXXXXXX"
+               target="_blank"
+               class="btn btn-primary">
+                💬 WhatsApp Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BOOKING
+========================= -->
+
+<section class="booking" id="contact">
+
+    <div class="container booking-grid">
+
+
+        <div class="booking-info">
+
+            <div class="eyebrow">
+                Repair Booking
+            </div>
+
+            <h2>
+                Tell Us What's Wrong
+            </h2>
+
+            <p>
+                Submit your device information and we'll
+                contact you to discuss the repair.
+            </p>
+
+
+            <div class="contact-list">
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        📞
+                    </div>
+
+                    <div>
+                        <strong>Call Us</strong>
+                        <span>+880 1XXX-XXXXXX</span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        💬
+                    </div>
+
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <span>Available for quick support</span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <strong>Visit Our Shop</strong>
+                        <span>Your Market, Your Area, Bangladesh</span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        🕒
+                    </div>
+
+                    <div>
+                        <strong>Opening Hours</strong>
+                        <span>Sat–Thu: 9:00 AM – 9:00 PM</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="form-card">
+
+            <h3>
+                Book Your Repair
+            </h3>
+
+            <p>
+                Fill in the details below.
+            </p>
+
+
+            <form id="repairForm">
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="01XXXXXXXXX"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Device Type
+                        </label>
+
+                        <select id="deviceType" required>
+
+                            <option value="">
+                                Select device
+                            </option>
+
+                            <option>
+                                Desktop PC
+                            </option>
+
+                            <option>
+                                Laptop
+                            </option>
+
+                            <option>
+                                Monitor
+                            </option>
+
+                            <option>
+                                Printer
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Service Needed
+                        </label>
+
+                        <select id="serviceType" required>
+
+                            <option value="">
+                                Select service
+                            </option>
+
+                            <option>
+                                PC Repair
+                            </option>
+
+                            <option>
+                                Laptop Repair
+                            </option>
+
+                            <option>
+                                Windows Installation
+                            </option>
+
+                            <option>
+                                Virus Removal
+                            </option>
+
+                            <option>
+                                Data Recovery
+                            </option>
+
+                            <option>
+                                Hardware Upgrade
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Describe the Problem
+                        </label>
+
+                        <textarea
+                            id="problem"
+                            placeholder="Example: PC is turning on but no display..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary form-submit"
+                >
+                    🔧 Send Repair Request
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Customer Reviews
+            </div>
+
+            <h2>
+                What Our Customers Say
+            </h2>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “My computer was extremely slow.
+                    They upgraded my SSD and optimized
+                    Windows. The difference was amazing.”
+                </p>
+
+                <div class="customer">
+
+                    <div class="avatar">
+                        R
+                    </div>
+
+                    <div>
+                        <strong>Rahim Ahmed</strong>
+                        <span>Local Customer</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Very helpful service. They explained
+                    the problem clearly before doing the repair.”
+                </p>
+
+                <div class="customer">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>Sumaiya Khan</strong>
+                        <span>Laptop Customer</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Good communication and reasonable pricing.
+                    My office PCs are now running much better.”
+                </p>
+
+                <div class="customer">
+
+                    <div class="avatar">
+                        M
+                    </div>
+
+                    <div>
+                        <strong>Mahfuz Hasan</strong>
+                        <span>Business Customer</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                FAQ
+            </div>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    How long does a repair take?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Repair time depends on the problem and
+                        required parts. Many basic services can
+                        be completed on the same day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Do you provide a service warranty?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Warranty depends on the type of
+                        repair and replacement part used.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Can I contact you before visiting?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. You can call or message us on
+                        WhatsApp before bringing your device.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Do you repair both desktop and laptop?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. We provide service for desktops,
+                        laptops, monitors, printers and selected
+                        computer accessories.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+
+                    <div class="logo-icon">
+                        ⚙
+                    </div>
+
+                    <div class="logo-text">
+
+                        <strong style="color:white;">
+                            TechCare
+                        </strong>
+
+                        <small style="color:#64748b;">
+                            COMPUTER & SERVICE CENTER
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <p>
+                    Professional computer repair,
+                    laptop service, hardware upgrades
+                    and IT support for home and business.
+                </p>
+
+
+                <a
+                    href="https://wa.me/8801XXXXXXXXX"
+                    target="_blank"
+                    class="btn btn-primary"
+                >
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="footer-title">
+                    Services
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#services">
+                        PC Repair
+                    </a>
+
+                    <a href="#services">
+                        Laptop Repair
+                    </a>
+
+                    <a href="#services">
+                        Windows Installation
+                    </a>
+
+                    <a href="#services">
+                        Data Recovery
+                    </a>
+
+                    <a href="#services">
+                        PC Upgrade
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="footer-title">
+                    Quick Links
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#about">
+                        About Us
+                    </a>
+
+                    <a href="#packages">
+                        Packages
+                    </a>
+
+                    <a href="#parts">
+                        Computer Parts
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="tel:+8801XXXXXXXXX">
+                        📞 +880 1XXX-XXXXXX
+                    </a>
+
+                    <a href="#">
+                        📍 Your City, Bangladesh
+                    </a>
+
+                    <a href="#">
+                        🕒 Sat–Thu: 9AM–9PM
+                    </a>
+
+                    <a href="#">
+                        ✉ support@example.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © <span id="year"></span>
+                TechCare Computer & Service Center.
+                All Rights Reserved.
+            </div>
+
+            <div>
+                Professional Computer Repair & IT Support
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/8801XXXXXXXXX"
+    target="_blank"
+    class="whatsapp"
+    aria-label="Chat on WhatsApp"
+>
+    💬
+</a>
+
+
+
+<!-- BACK TO TOP -->
+
+<button
+    class="back-top"
+    id="backTop"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+    Repair request prepared successfully.
+</div>
+
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* =========================
+   FAQ
+========================= */
+
+document.querySelectorAll(".faq-question").forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        const item = button.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(function(other){
+
+            if(other !== item){
+                other.classList.remove("active");
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+/* =========================
+   REPAIR FORM
+========================= */
+
+const repairForm = document.getElementById("repairForm");
+
+repairForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const phone =
+        document.getElementById("customerPhone").value.trim();
+
+    const device =
+        document.getElementById("deviceType").value;
+
+    const service =
+        document.getElementById("serviceType").value;
+
+    const problem =
+        document.getElementById("problem").value.trim();
+
+
+    const message =
+`Hello TechCare Computer & Service Center,
+
+I would like to book a repair service.
+
+Name: ${name}
+Phone: ${phone}
+Device: ${device}
+Service: ${service}
+
+Problem:
+${problem}
+
+Please let me know the next steps.`;
+
+
+    const whatsappNumber = "8801XXXXXXXXX";
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+
+    showToast(
+        "Opening WhatsApp with your repair request..."
+    );
+
+});
+
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },3000);
+
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY > 500){
+
+        backTop.classList.add("show");
+
+    }else{
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+
+backTop.addEventListener("click",function(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+
+/* =========================
+   CURRENT YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* =========================
+   SMOOTH NAVIGATION
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+
+    anchor.addEventListener("click",function(event){
+
+        const target =
+            document.querySelector(
+                this.getAttribute("href")
+            );
+
+        if(target){
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
